@@ -1,0 +1,47 @@
+.indexback {
+    background-image: url("backg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 125vh;
+    font-family: 'Roboto';
+
+}
+
+body {
+    width: 100vw !important;
+    overflow-x: hidden !important;
+}
+
+.big {
+    font-size: 60px;
+    color: white;
+    font: 4rem/1.5 var(--bs-font-sans-serif);
+    font-weight: 900;
+
+}
+
+.signup {
+    background-color: #E2037A;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: white;
+}
+
+.signup:hover {
+    background-color: white;
+    color: #E2037A;
+}
+
+.content2 {
+    color: white;
+    margin-left: inherit;
+    font-weight: 900;
+    font-size: 20px;
+}
