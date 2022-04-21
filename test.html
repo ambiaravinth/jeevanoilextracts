@@ -33,32 +33,32 @@
             }
         }
     
-        function Move(e) {
-            if (!MoveEnabled) return;
-            whichOne.style.left = isIE ? nowX + event.clientX - offsetx : nowX + e.clientX - offsetx;
-            whichOne.style.top = isIE ? nowY + event.clientY - offsety : nowY + e.clientY - offsety;
-            return false;
-        }
+        // function Move(e) {
+        //     if (!MoveEnabled) return;
+        //     whichOne.style.left = isIE ? nowX + event.clientX - offsetx : nowX + e.clientX - offsetx;
+        //     whichOne.style.top = isIE ? nowY + event.clientY - offsety : nowY + e.clientY - offsety;
+        //     return false;
+        // }
     
-        function MoveN4(whatOne) {
-            if (!isN4) return;
-            N4 = eval(whatOne);
-            N4.captureEvents(Event.MOUSEDOWN | Event.MOUSEUP);
-            N4.onmousedown = function (e) {
-                N4.captureEvents(Event.MOUSEMOVE);
-                N4x = e.x;
-                N4y = e.y;
-            }
-            N4.onmousemove = function (e) {
-                if (isActive) {
-                    N4.moveBy(e.x - N4x, e.y - N4y);
-                    return false;
-                }
-            }
-            N4.onmouseup = function () {
-                N4.releaseEvents(Event.MOUSEMOVE);
-            }
-        }
+        // function MoveN4(whatOne) {
+        //     if (!isN4) return;
+        //     N4 = eval(whatOne);
+        //     N4.captureEvents(Event.MOUSEDOWN | Event.MOUSEUP);
+        //     N4.onmousedown = function (e) {
+        //         N4.captureEvents(Event.MOUSEMOVE);
+        //         N4x = e.x;
+        //         N4y = e.y;
+        //     }
+        //     N4.onmousemove = function (e) {
+        //         if (isActive) {
+        //             N4.moveBy(e.x - N4x, e.y - N4y);
+        //             return false;
+        //         }
+        //     }
+        //     N4.onmouseup = function () {
+        //         N4.releaseEvents(Event.MOUSEMOVE);
+        //     }
+        // }
     
         function ToggleFloatingLayer(DivID, iState) // 1 visible, 0 hidden
         {
