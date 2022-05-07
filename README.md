@@ -1,2 +1,0 @@
-# jeevanoilextracts
-Consultency project
