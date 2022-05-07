@@ -1,6 +1,7 @@
 .indexback {
     background-image: url("#");
     background-attachment: fixed;
+    background-color: black;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
