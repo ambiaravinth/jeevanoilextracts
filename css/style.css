@@ -9,37 +9,7 @@ body {
 	color:#777;
 	line-height:1.7;
 }
-.data_table {
-    width: 100%;
-    border-collapse: collapse;
-}
-tr {
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
-}
-tbody{
-	background: transparent;
-    font-size: 100%;
-    margin: 0;
-    outline: 0;
-    padding: 0;
-    vertical-align: baseline;
-}
-table {
-    display: table;
-    border-collapse: separate;
-    box-sizing: border-box;
-    text-indent: initial;
-    border-spacing: 2px;
-    border-color: grey;
-	background: transparent;
-    font-size: 100%;
-    margin: 0;
-    outline: 0;
-    padding: 0;
-    vertical-align: baseline;
-}
+
 h1,h2,h3,h4,h5,h6 {
 	font-family:Roboto;
 	font-weight:700;
