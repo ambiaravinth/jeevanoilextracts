@@ -27,10 +27,11 @@
 		</div>
 		<div id="navbar-collapse-02" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="propClone"><a href="index.php">Home</a></li>
-				<li class="propClone"><a href="product.php">Product</a></li>
-				<li class="propClone"><a href="checkout.php">Checkout</a></li>
-				<li class="propClone"><a href="aboutus.php">Contact</a></li>
+			<li class="propClone" ><a href="index.php" >Home</a></li>
+				<!--  <li class="propClone"><a href="###">Product</a></li>
+				<li class="propClone"><a href="###" >Checkout</a></li> -->
+				<li class="propClone"><a href="aboutus.php" >About us</a></li>
+				<li class="propClone"><a href="login.php" >Login</a></li>
 			</ul>
 		</div>
 	</div>
@@ -66,11 +67,11 @@
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2">
 			
-			<form method="post" action="http://localhost:3001/save" id="contactform" >
+			<form method="post" action="back/reg_process.php" id="contactform" >
 				<div class="form" style="margin-left: 20%;margin-right: 20%;">
-					<input type="text" name="username" placeholder="Username">
-					<input type="email" name="useremail" placeholder="Email Id">
-                    <input type="password" name="password" placeholder="New Password">
+					<input type="text" name="ip_username" placeholder="Username">
+					<input type="email" name="ip_email" placeholder="Email Id">
+                    <input type="password" name="ip_password" placeholder="New Password">
                     <input type="text" name="userpassword" placeholder="Confirm Password">
 					<input type="submit" class="clearfix btn">
 					<!--<input type="submit" id="submit" class="clearfix btn" value="Register "> -->                 

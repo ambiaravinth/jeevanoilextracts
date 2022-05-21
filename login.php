@@ -27,11 +27,10 @@
 		</div>
 		<div id="navbar-collapse-02" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="propClone" ><a href="index.php" >Home</a></li>
-				<li class="propClone"><a href="###">Product</a></li>
-				<li class="propClone"><a href="###" >Checkout</a></li>
+			<li class="propClone" ><a href="index.php" >Home</a></li>
+				<!--  <li class="propClone"><a href="###">Product</a></li>
+				<li class="propClone"><a href="###" >Checkout</a></li> -->
 				<li class="propClone"><a href="aboutus.php" >About us</a></li>
-				<li class="propClone"><a href="login.php" >Login</a></li>
 			</ul>
 		</div>
 	</div>
@@ -67,10 +66,10 @@
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2">
 			
-			<form method="post" action="http://localhost:3001/login" id="contactform">
+			<form method="post" action="back/login_process.php" id="contactform">
 				<div class="form" style="margin-left: 20%;margin-right: 20%;">
-					<input type="text" name="username" placeholder="Username">
-					<input type="password" name="userpassword" placeholder="Password">
+					<input type="text" name="ip_username" placeholder="Username">
+					<input type="password" name="ip_password" placeholder="Password">
                     <a href="register.php" style="color: black;float: right;">Don't have an account ?</a>
 					<input type="submit" class="clearfix btn">
 				</div>

@@ -1,3 +1,7 @@
+<?php
+	require_once 'back/session.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,11 +33,11 @@
 		</div>
 		<div id="navbar-collapse-02" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="propClone" ><a href="index.php" >Home</a></li>
-				<!--  <li class="propClone"><a href="###">Product</a></li>
-				<li class="propClone"><a href="###" >Checkout</a></li> -->
-				<li class="propClone"><a href="aboutus.php" >About us</a></li>
-				<li class="propClone"><a href="login.php" >Login</a></li>
+				<li class="propClone" ><a href="public_home.php" >Home</a></li>
+				<li class="propClone"><a href="###">Product</a></li>
+				<li class="propClone"><a href="###" >Checkout</a></li>
+				<!-- <li class="propClone"><a href="aboutus.php" >About us</a></li> -->
+				<li class="propClone"><a href="back/logout.php" > <?php echo $_SESSION["current_username"]; ?> </a></li>
 			</ul>
 		</div>
 	</div>
