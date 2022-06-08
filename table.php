@@ -51,7 +51,7 @@
 				<!--  <li class="propClone"><a href="###">Product</a></li>
 				<li class="propClone"><a href="###" >Checkout</a></li> -->
 				<li class="propClone"><a href="aboutus.php" >About us</a></li>
-				<li class="propClone"><a href="login.php" ><?php $_SESSION["current_username"]; ?></a></li>
+				<li class="propClone"><a href="back/logout.php" > <?php echo $_SESSION["current_username"]; ?> </a></li>
 			</ul>
 		</div>
 	</div>

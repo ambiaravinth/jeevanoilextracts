@@ -180,12 +180,6 @@
 </section>
 
 
-
-
-
-
-
-
 <!-- TESTIMONIAL =============================-->
 <div class="item content">
 	<div class="container">

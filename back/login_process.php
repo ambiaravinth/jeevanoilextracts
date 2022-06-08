@@ -31,5 +31,4 @@
     else {
         echo "<script> alert('Login Unsuccesfull please login again'); document.location='../login.php' </script>";
     }
-
 ?>
