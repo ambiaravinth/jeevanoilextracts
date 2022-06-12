@@ -32,7 +32,7 @@
 		</div>
 		<div id="navbar-collapse-02" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="propClone"><a href="public_home.php" >Home</a></li>
+				<li class="propClone"><a href="admin_home.php" >Home</a></li>
 				<li class="propClone"><a href="sales_rip.php">Sales</a></li>
 				<li class="propClone"><a href="stocks_manage.php" >Stocks</a></li>
 				<li class="propClone"><a href="product_manage.php" >Products</a></li>
