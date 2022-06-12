@@ -33,7 +33,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li class="propClone" ><a href="public_home.php" >Home</a></li>
 				<li class="propClone"><a href="product.php">Product</a></li>
-				<!-- <li class="propClone"><a href="cart.php" >Cart</a></li> -->
+				<li class="propClone"><a href="cart.php" >Cart</a></li>
 				<li class="propClone"><a href="back/logout.php" > <?php echo $_SESSION["current_username"]; ?> </a></li>
 			</ul>
 		</div>
@@ -44,7 +44,7 @@
 			<div class="col-md-12 text-center">
 				<div class="text-pageheader">
 					<div class="subtext-image" data-scrollreveal="enter bottom over 1.7s after 0.0s">
-						 My Cart 
+						 Profile 
 					</div>
 				</div>
 			</div>
@@ -58,7 +58,7 @@
 <div class="container toparea">
 	<div class="underlined-title">
 		<div class="editContent">
-			<h1 class="text-center latestitems">Cart</h1>
+			<h1 class="text-center latestitems">Profile</h1>
 		</div>
 		<div class="wow-hr type_short">
 			<span class="wow-hr-h">
@@ -70,18 +70,6 @@
 	</div>
 </div>
 </section>
-
-
-
-
-	
-
-
-
-
-
-
-
 
 
 
