@@ -1,5 +1,4 @@
-<script src="../js/sweetalert.min.js"></script>
-<script> swal("Registration Sucessfull!", "Please login", "success"); </script>
+
 <?php
     include_once 'db.php';
 
@@ -10,6 +9,8 @@
      $sql = "INSERT INTO users (username,email,password) VALUES ('$username','$email','$password')";
  
      if (mysqli_query($conn, $sql)) {
+      echo '<script>alert("Registration Successfull please login...")</script>';
+        
         echo "<script> document.location='../login.php' </script>";
      } 
      else {

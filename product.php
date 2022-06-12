@@ -1,3 +1,7 @@
+<?php
+	require_once 'back/session.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +13,7 @@
 <link href="css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
+
 </head>
 <body>
 
@@ -27,11 +32,10 @@
 		</div>
 		<div id="navbar-collapse-02" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="propClone" ><a href="index.php" >Home</a></li>
-				<li class="propClone"><a href="###">Product</a></li>
-				<li class="propClone"><a href="###" >Checkout</a></li>
-				<li class="propClone"><a href="aboutus.php" >About us</a></li>
-				<li class="propClone"><a href="login.php" >Login</a></li>
+				<li class="propClone" ><a href="public_home.php" >Home</a></li>
+				<li class="propClone"><a href="product.php">Product</a></li>
+				<li class="propClone"><a href="cart.php" >Cart</a></li>
+				<li class="propClone"><a href="back/logout.php"> <?php echo $_SESSION["current_username"]; ?> </a></li>
 			</ul>
 		</div>
 	</div>
@@ -72,7 +76,6 @@
 	<div class="row">
 		<div class="col-md-4">
 			<div class="productbox">
-				
 				<div class="card" style="width:100%;">
 					<img src="./images/coco_img.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
@@ -84,16 +87,10 @@
 					  <a href="#" class="btn btn-warning">Price:Rs.100</a>
 					</div>
 				  </div>
-				  
-
-				  
-			
 			</div>
-			
 		</div>
 		<div class="col-md-4">
 			<div class="productbox">
-				
 				<div class="card" style="width:100%;">
 					<img src="./images/neem_img.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
@@ -105,17 +102,10 @@
 					  <a href="#" class="btn btn-warning">Price:Rs.200</a>
 					</div>
 				  </div>
-				  
-
-				  
-			
 			</div>
-			
 		</div>
-
 		<div class="col-md-4">
-			<div class="productbox">
-				
+			<div class="productbox">	
 				<div class="card" style="width:100%;">
 					<img src="./images/rice_img.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
@@ -127,19 +117,9 @@
 					  <a href="#" class="btn btn-warning">Price:Rs.150</a>
 					</div>
 				  </div>
-				  
-
-				  
-			
 			</div>
-			
 		</div>
-		
 	</div>
-
-
-
-
 <!-- ROW 2 PRODUCTS -->
 
 	<div class="row">
@@ -335,6 +315,17 @@
 <script src="js/jquery-.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/anim.js"></script>
+<!-- for logout option -->
+<script>
+$(document).ready(function(){
+    $(".dropdown").hover(function(){
+        var dropdownMenu = $(this).children(".dropdown-menu");
+        if(dropdownMenu.is(":visible")){
+            dropdownMenu.parent().toggleClass("open");
+        }
+    });
+});     
+</script>
 
 </body>
 </html>

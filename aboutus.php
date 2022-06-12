@@ -114,12 +114,12 @@
 					Your message has been sent. Thank you!
 				</div>
 			</div>
-			<form method="post" action="contact.php" id="contactform">
+			<form method="post" action="back/aboutus_process.php" id="contactform">
 				<div class="form">
 					<input type="text" name="name" placeholder="Your Name *">
 					<input type="text" name="email" placeholder="Your E-mail Address *">
-					<textarea name="comment" rows="7" placeholder="Type your Message *"></textarea>
-					<input type="submit" id="submit" class="clearfix btn" value="Send">
+					<textarea name="msg" rows="5" placeholder="Type your Message *"></textarea>
+					<input type="submit" class="clearfix btn" value="Send">
 				</div>
 			</form>
 		</div>

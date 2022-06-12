@@ -1,0 +1,3 @@
+puplic_home  ===== logout--> option like dropdown profile and logout.
+FOOTER  =======  all social media links to give.
+HOME ========  remove purchase and deatails link to product page  
