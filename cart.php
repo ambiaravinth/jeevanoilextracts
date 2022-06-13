@@ -13,6 +13,9 @@
 <link href="css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link href=" https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
+<link rel="stylesheet" href="./css/cart.css">
 </head>
 <body>
 
@@ -74,7 +77,126 @@
 
 
 
-	
+<div style="padding-left: 15%; padding-right: 15%;">
+<div class="content">
+        <div class="row">
+            <div class="col-md-12 col-lg-8">
+                <div class="items">
+                    
+					<div class="product">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img class="img-fluid mx-auto d-block image" src="./images/coco_img.jpg" alt="###">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-md-5 product-name">
+                                            <div class="product-name">
+                                                <a href="#">Lorem Ipsum dolor</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 quantity">
+                                            <label for="quantity">Quantity:</label><br>
+                                            <button style="margin: 5%;">-</button><p1 class="well well-sm">1</p1><button style="margin: 5%;">+</button>
+                                        </div>
+                                        <div class="col-md-3 price">
+											<p1><b>Price</b></p1><br>
+                                            <p1>120</p1>₹<br><br>
+											<a href="#" style="color: red;">Remove</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<br>
+                    
+					<div class="product">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img class="img-fluid mx-auto d-block image" src="./images/coco_img.jpg" alt="###">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-md-5 product-name">
+                                            <div class="product-name">
+                                                <a href="#">Lorem Ipsum dolor</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 quantity">
+                                            <label for="quantity">Quantity:</label>
+                                            <input id="quantity" type="number" value="1" class="form-control quantity-input">
+                                        </div>
+                                        <div class="col-md-3 price">
+                                            <span>$120</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<br>
+                    
+					<div class="product">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img class="img-fluid mx-auto d-block image" src="./images/coco_img.jpg" alt="###">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-md-5 product-name">
+                                            <div class="product-name">
+                                                <a href="#">Lorem Ipsum dolor</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 quantity">
+                                            <label for="quantity">Quantity:</label>
+                                            <input id="quantity" type="number" value="1" class="form-control quantity-input">
+                                        </div>
+                                        <div class="col-md-3 price">
+                                            <span>$120</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+			<div class="col-md-12 col-lg-4">
+                <div class="summary">
+                    <h3 style="text-align: center;">Summary</h3>
+                    <div class="summary-item">
+						<p1 style="padding-left: 20%;">Subtotal</p1>
+						<p1 style="padding-left: 33%;">$360</p1>
+					</div>
+                    <div class="summary-item">
+						<p1 style="padding-left: 20%;">Discount</p1>
+						<p1 style="padding-left: 32%;">$0</p1>
+					</div>
+                    <div class="summary-item">
+						<p1 style="padding-left: 20%;">Shipping</p1>
+						<p1 style="padding-left: 32%;">$0</p1>
+					</div>
+					<hr>
+                    <div class="summary-item">
+						<p1 style="padding-left: 20%;"><b>Total</b></p1>
+						<p1 style="padding-left: 40%;">$360</p1>
+                    </div>
+					<hr>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 
 
 
