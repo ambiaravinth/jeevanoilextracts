@@ -108,18 +108,13 @@
 	</div>
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2">
-			<div class="done">
-				<div class="alert alert-success">
-					<button type="button" class="close" data-dismiss="alert">×</button>
-					Your message has been sent. Thank you!
-				</div>
-			</div>
-			<form method="post" action="back/aboutus_process.php" id="contactform">
+			
+			<form method="post" id="contactform">
 				<div class="form">
 					<input type="text" name="name" placeholder="Your Name *">
 					<input type="text" name="email" placeholder="Your E-mail Address *">
-					<textarea name="msg" rows="5" placeholder="Type your Message *"></textarea>
-					<input type="submit" class="clearfix btn" value="Send">
+					<textarea name="message" rows="5" placeholder="Type your Message *"></textarea>
+					<input name="submit" type="submit" class="clearfix btn" value="Send">
 				</div>
 			</form>
 		</div>
@@ -169,3 +164,50 @@
 <script src="js/validate.js"></script>
 </body>
 </html>
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+
+require('PHPMailer/PHPMailer.php');
+require('PHPMailer/SMTP.php');
+require('PHPMailer/Exception.php');
+
+if(isset($_POST['submit']))
+{
+  $name=$_POST['name'];
+  $email=$_POST['email'];
+  $message=$_POST['message'];
+  
+  $mail = new PHPMailer(true);
+
+  try {
+    
+                       
+    $mail->isSMTP();                                           
+    $mail->Host       = 'smtp.gmail.com';                     
+    $mail->SMTPAuth   = true;                                   
+    $mail->Username   = 'maheshsriramt.19it@kongu.edu';                    
+    $mail->Password   = '10-Aug-02';                               
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;       
+    $mail->Port       = 587;                                   
+
+    
+    $mail->setFrom($email, 'JEEVAN SOLVENT EXTRACTS PVT.LTD');
+    $mail->addAddress($email);     
+ 
+
+   
+    
+    $mail->isHTML(true);                                 
+    $mail->Subject = 'A message from user';
+    $mail->Body    = 'NAME :'.$name.'<br>EMAIL :'.$email.'<br>MESSAGE :'.$message.'<br>';
+    
+
+    $mail->send();
+    echo "<script>alert('Message has been send')</script>";
+} catch (Exception $e) {
+    echo "<script>alert('Message could not be sent. Mailer Error: {$mail->ErrorInfo}')</script>";
+}
+}
