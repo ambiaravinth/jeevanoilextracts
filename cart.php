@@ -1,5 +1,7 @@
 <?php
+    include_once 'back/db.php';
 	require_once 'back/session.php';
+    require_once 'back/cart_process.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,8 +15,6 @@
 <link href="css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link href=" https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
 <link rel="stylesheet" href="./css/cart.css">
 </head>
 <body>
@@ -74,119 +74,124 @@
 </div>
 </section>
 
-
-
-
 <div style="padding-left: 15%; padding-right: 15%;">
 <div class="content">
         <div class="row">
             <div class="col-md-12 col-lg-8">
                 <div class="items">
+  
+                <?php
+                    while($data = mysqli_fetch_array($user_products))
+                    {
                     
-					<div class="product">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img class="img-fluid mx-auto d-block image" src="./images/coco_img.jpg" alt="###">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="info">
-                                    <div class="row">
-                                        <div class="col-md-5 product-name">
-                                            <div class="product-name">
-                                                <a href="#">Lorem Ipsum dolor</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 quantity">
-                                            <label for="quantity">Quantity:</label><br>
-                                            <button style="margin: 5%;">-</button><p1 class="well well-sm">1</p1><button style="margin: 5%;">+</button>
-                                        </div>
-                                        <div class="col-md-3 price">
-											<p1><b>Price</b></p1><br>
-                                            <p1>120</p1>₹<br><br>
-											<a href="#" style="color: red;">Remove</a>
-                                        </div>
+                        echo "<div class=\"product\">
+                                <div class=\"row\">
+                                    <div class=\"col-md-3\">
+                                        <img class=\"img-fluid mx-auto d-block image\" src=\"".$data['p_img']."\" alt=\"###\">
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-					<br>
-                    
-					<div class="product">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img class="img-fluid mx-auto d-block image" src="./images/coco_img.jpg" alt="###">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="info">
-                                    <div class="row">
-                                        <div class="col-md-5 product-name">
-                                            <div class="product-name">
-                                                <a href="#">Lorem Ipsum dolor</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 quantity">
-                                            <label for="quantity">Quantity:</label>
-                                            <input id="quantity" type="number" value="1" class="form-control quantity-input">
-                                        </div>
-                                        <div class="col-md-3 price">
-                                            <span>$120</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-					<br>
-                    
-					<div class="product">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img class="img-fluid mx-auto d-block image" src="./images/coco_img.jpg" alt="###">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="info">
-                                    <div class="row">
-                                        <div class="col-md-5 product-name">
-                                            <div class="product-name">
-                                                <a href="#">Lorem Ipsum dolor</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 quantity">
-                                            <label for="quantity">Quantity:</label>
-                                            <input id="quantity" type="number" value="1" class="form-control quantity-input">
-                                        </div>
-                                        <div class="col-md-3 price">
-                                            <span>$120</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                    <div class=\"col-md-8\">
+                                        <div class=\"info\">
+                                            <div class=\"row\">
+                                                <div class=\"col-md-5 product-name\">
+                                                    <div class=\"product-name\">
+                                                        <a href=\"#\">".$data['p_name']."</a>
+                                                    </div>
+                                                </div>
+                                                <div class=\"col-md-4 quantity\">
+                                                    <label for=\"quantity\">Quantity:</label><br>
+                                                        
+                                                        <form method=\"post\">
+                                                            <input type=\"hidden\" name=\"product_id\" value=\"".$data['p_id']."\">
+                                                            <input type=\"submit\" name=\"button1\" value=\"-\" />
+                                                            <p1 class=\"well well-sm\">".$data['nos']."</p1>  
+                                                            <input type=\"submit\" name=\"button2\" value=\"+\" />
+                                                        </form>
 
+                                                </div>
+                                                <div class=\"col-md-3 price\">
+                                                    <p1><b>Price</b></p1><br>
+                                                    <p1>".$data['p_price']."</p1>₹<br><br>
+                                                    <form method=\"post\">
+                                                        <input type=\"hidden\" name=\"product_id\" value=\"".$data['p_id']."\">
+                                                        <input type=\"submit\" name=\"button3\" value=\"Remove\" />
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br> ";
+                    }
+                ?>
                 </div>
             </div>
-            
+
+            <?php  
+                $name = $_SESSION["current_username"];
+             
+                if(isset($_POST['button1'])){
+                    $p_id = $_POST['product_id'];
+                    $sql = "SELECT * FROM products where p_id='$p_id'"; 
+                    $data  = mysqli_fetch_array(mysqli_query($conn,$sql));
+                    if($data) {
+                        $price = $data['p_price'];
+                    }
+                    $sql = "SELECT nos FROM cart where p_id='$p_id' and username='$name'"; 
+                    $data  = mysqli_fetch_array(mysqli_query($conn,$sql));
+                    if ($data) {
+                        $nos = $data['nos'];
+                        if($nos > 1){
+                            $nos = $data['nos']-1;
+                            $price = $nos*$price;
+                            $sql = "UPDATE cart SET nos='$nos', p_price='$price' where p_id='$p_id' and username='$name'";
+                        }
+                    }
+                    mysqli_query($conn,$sql);
+                    echo "<script>document.location='cart.php' </script>";
+                }
+                
+                if(isset($_POST['button2'])){
+                    $p_id = $_POST['product_id'];
+                    $sql = "SELECT * FROM products where p_id='$p_id'"; 
+                    $data  = mysqli_fetch_array(mysqli_query($conn,$sql));
+                    if($data) {
+                        $price = $data['p_price'];
+                    }
+                    $sql = "SELECT nos FROM cart where p_id='$p_id' and username='$name'"; 
+                    $data  = mysqli_fetch_array(mysqli_query($conn,$sql));
+                    if ($data) {
+                        $nos = $data['nos']+1;
+                        $price = $nos*$price;
+                        $sql = "UPDATE cart SET nos='$nos', p_price='$price' where p_id='$p_id' and username='$name'";
+                    }
+                    mysqli_query($conn,$sql);
+                    echo "<script>document.location='cart.php' </script>"; 
+                }
+                
+                if(isset($_POST['button3'])){
+                    $p_id = $_POST['product_id'];
+                    $sql = "DELETE FROM cart where p_id='$p_id' and username='$name'"; 
+                    mysqli_query($conn,$sql);
+                    echo "<script>document.location='cart.php' </script>";
+                }
+            ?>
+
 			<div class="col-md-12 col-lg-4">
                 <div class="summary">
                     <h3 style="text-align: center;">Summary</h3>
                     <div class="summary-item">
 						<p1 style="padding-left: 20%;">Subtotal</p1>
-						<p1 style="padding-left: 33%;">$360</p1>
+						<p1 style="padding-left: 33%;"><?php echo $sub_price; ?></p1>
 					</div>
                     <div class="summary-item">
 						<p1 style="padding-left: 20%;">Discount</p1>
-						<p1 style="padding-left: 32%;">$0</p1>
-					</div>
-                    <div class="summary-item">
-						<p1 style="padding-left: 20%;">Shipping</p1>
-						<p1 style="padding-left: 32%;">$0</p1>
+						<p1 style="padding-left: 32%;"><?php echo $discount; ?></p1>
 					</div>
 					<hr>
                     <div class="summary-item">
 						<p1 style="padding-left: 20%;"><b>Total</b></p1>
-						<p1 style="padding-left: 40%;">$360</p1>
+						<p1 style="padding-left: 40%;"><?php echo $total; ?></p1>
                     </div>
 					<hr>
                     <button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
@@ -194,19 +199,7 @@
             </div>
         </div>
     </div>
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- CALL TO ACTION =============================-->
 <section class="content-block" style="background-color:#00bba7;">

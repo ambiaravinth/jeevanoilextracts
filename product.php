@@ -70,7 +70,6 @@
 		</div>
 	</div>
 
-
 	<!-- ROW 1 PRODUCTS -->
 	<div class="row">
 		
@@ -110,6 +109,7 @@
 				  </div>
 			</div>
 		</div>
+
 		<div class="col-md-4">
 			<div class="productbox">	
 				<div class="card" style="width:100%;">
@@ -129,8 +129,8 @@
 			</div>
 		</div>
 	</div>
-<!-- ROW 2 PRODUCTS -->
 
+	<!-- ROW 2 PRODUCTS -->
 	<div class="row">
 		<div class="col-md-4">
 			<div class="productbox">
@@ -148,7 +148,7 @@
 						<input type="submit" class="btn btn-primary" value="Add to cart">
 					  </form>
 					</div>
-				  </div>
+				</div>
 			</div>
 		</div>
 		<div class="col-md-4">
@@ -190,7 +190,6 @@
 	</div>
 
 <!-- ROW 3 PRODUCTS -->
-
 	<div class="row">
 		<div class="col-md-4">
 			<div class="productbox">				
@@ -207,7 +206,7 @@
 						<input type="submit" class="btn btn-primary" value="Add to cart">
 					  </form>
 					</div>
-				  </div>
+				</div>
 			</div>
 		</div>
 		
@@ -226,7 +225,7 @@
 						<input type="submit" class="btn btn-primary" value="Add to cart">
 					  </form>
 					</div>
-				  </div>
+				</div>
 			</div>	
 		</div>
 
@@ -245,22 +244,12 @@
 						<input type="submit" class="btn btn-primary" value="Add to cart">
 					  </form>
 					</div>
-				  </div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 </section>
-
-
-
-
-
-
-
-
-
-
 
 <!-- CALL TO ACTION =============================-->
 <section class="content-block" style="background-color:#00bba7;">
@@ -291,7 +280,6 @@
 			</ul>
 			<p>
 				 &copy; JEEVAN SOLVENT EXTRACTS<br/>
-			
 			</p>
 		</div>
 	</div>
@@ -301,17 +289,6 @@
 <script src="js/jquery-.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/anim.js"></script>
-<!-- for logout option -->
-<script>
-$(document).ready(function(){
-    $(".dropdown").hover(function(){
-        var dropdownMenu = $(this).children(".dropdown-menu");
-        if(dropdownMenu.is(":visible")){
-            dropdownMenu.parent().toggleClass("open");
-        }
-    });
-});     
-</script>
 
 </body>
 </html>
