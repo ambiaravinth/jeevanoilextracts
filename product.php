@@ -80,8 +80,7 @@
 					<div class="card-body">
 					  <h5 class="card-title">Coconut Oil</h5>
 					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made from all natural ingredients its easy to use, buy yours online today.</p>
-					  <a href="#####" class="btn btn-info">Quantity:1 litre</a>
-					  <a href="#####" class="btn btn-warning">Price:Rs.100</a> 
+					
 					  <form action="back/product_process.php" method="POST">
 						<input type="hidden" name="product" value="1001">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
@@ -99,8 +98,7 @@
 					  <h5 class="card-title">Coconut Oil</h5>
 					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made 
 						from all natural ingredients its easy to use, buy yours online today.</p>
-					  <a href="#" class="btn btn-info">Quantity:1 litre</a>
-					  <a href="#" class="btn btn-warning">Price:Rs.200</a>
+					
 					  <form action="back/product_process.php" method="POST">
 						<input type="hidden" name="product" value="2001">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
@@ -118,8 +116,7 @@
 					  <h5 class="card-title">Coconut Oil</h5>
 					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made 
 						from all natural ingredients its easy to use, buy yours online today.</p>
-					  <a href="#" class="btn btn-info">Quantity:1 litre</a>
-					  <a href="#" class="btn btn-warning">Price:Rs.150</a>
+					 
 					  <form action="back/product_process.php" method="POST">
 						<input type="hidden" name="product" value="3001">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
@@ -141,8 +138,7 @@
 					  <h5 class="card-title">Coconut Oil</h5>
 					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made 
 						from all natural ingredients its easy to use, buy yours online today.</p>
-					  <a href="#" class="btn btn-info">Quantity:2 litres</a>
-					  <a href="#" class="btn btn-warning">Price:Rs.200</a>
+					 
 					  <form action="back/product_process.php" method="POST">
 						<input type="hidden" name="product" value="1002">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
@@ -159,8 +155,7 @@
 					  <h5 class="card-title">Coconut Oil</h5>
 					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made 
 						from all natural ingredients its easy to use, buy yours online today.</p>
-					  <a href="#" class="btn btn-info">Quantity:2 litres</a>
-					  <a href="#" class="btn btn-warning">Price:Rs.400</a>
+					 
 					  <form action="back/product_process.php" method="POST">
 						<input type="hidden" name="product" value="2002">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
@@ -177,8 +172,7 @@
 					  <h5 class="card-title">Coconut Oil</h5>
 					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made 
 						from all natural ingredients its easy to use, buy yours online today.</p>
-					  <a href="#" class="btn btn-info">Quantity:2 litres</a>
-					  <a href="#" class="btn btn-warning">Price:Rs.300</a>
+					  
 					  <form action="back/product_process.php" method="POST">
 						<input type="hidden" name="product" value="3002">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
@@ -199,8 +193,7 @@
 					  <h5 class="card-title">Coconut Oil</h5>
 					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made 
 						from all natural ingredients its easy to use, buy yours online today.</p>
-					  <a href="#" class="btn btn-info">Quantity:5 litres</a>
-					  <a href="#" class="btn btn-warning">Price:Rs.500</a>
+					  
 					  <form action="back/product_process.php" method="POST">
 						<input type="hidden" name="product" value="1003">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
@@ -218,8 +211,7 @@
 					  <h5 class="card-title">Coconut Oil</h5>
 					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made 
 						from all natural ingredients its easy to use, buy yours online today.</p>
-					  <a href="#" class="btn btn-info">Quantity:5 litre</a>
-					  <a href="#" class="btn btn-warning">Price:Rs.1000</a>
+		
 					  <form action="back/product_process.php" method="POST">
 						<input type="hidden" name="product" value="2003">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
@@ -237,8 +229,7 @@
 					  <h5 class="card-title">Coconut Oil</h5>
 					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made 
 						from all natural ingredients its easy to use, buy yours online today.</p>
-					  <a href="#" class="btn btn-info">Quantity:5 litres</a>
-					  <a href="#" class="btn btn-warning">Price:Rs.750</a>
+					
 					  <form action="back/product_process.php" method="POST">
 						<input type="hidden" name="product" value="3003">
 						<input type="submit" class="btn btn-primary" value="Add to cart">

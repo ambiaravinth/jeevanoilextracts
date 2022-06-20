@@ -37,7 +37,7 @@
 				<li class="propClone"><a href="product.php">Product</a></li>
 				<li class="propClone"><a href="cart.php" >My Cart</a></li>
 				<!-- <li class="propClone"><a href="aboutus.php" >About us</a></li> -->
-				<li class="propClone"><a href="back/logout.php" > <?php echo $_SESSION["current_username"]; ?> </a></li>
+				<li class="propClone"><a style="color:#3D566E z-index:3;" href="back/logout.php" > <?php echo $_SESSION["current_username"]; ?> </a></li>
 			</ul>
 		</div>
 	</div>
