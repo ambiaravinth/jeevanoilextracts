@@ -70,7 +70,7 @@
 				<div class="form" style="margin-left: 20%;margin-right: 20%;">
 					<input type="text" name="ip_username" placeholder="Username">
 					<input type="password" name="ip_password" placeholder="Password">
-                    <a href="register.php" style="color: black;float: right;">Don't have an account ?</a>
+                    <a href="verify.php" style="color: black;float: right;">Don't have an account ?</a>
 					<input type="submit" class="clearfix btn">
 				</div>
 			</form>

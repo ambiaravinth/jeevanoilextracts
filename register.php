@@ -1,3 +1,4 @@
+echo "<script>alert('Verified Email Address')</script>";
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,7 +71,7 @@
 			<form method="post" action="back/reg_process.php" id="contactform" >
 				<div class="form" style="margin-left: 20%;margin-right: 20%;">
 					<input type="text" name="ip_username" placeholder="Username">
-					<input type="email" name="ip_email" placeholder="Email Id">
+					<input type="email" name="ip_email" placeholder="Email Id" >
                     <input type="password" name="ip_password" placeholder="New Password">
                     <input type="text" name="userpassword" placeholder="Confirm Password">
 					<input type="submit" class="clearfix btn">
