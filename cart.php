@@ -131,7 +131,7 @@
                                                     <p1>".$data['p_price']."</p1>₹<br><br>
                                                     <form method=\"post\">
                                                         <input type=\"hidden\" name=\"product_id\" value=\"".$data['p_id']."\">
-                                                        <input  class=\"btn btn-info\" type=\"submit\" name=\"button3\" value=\"Remove\"/>
+                                                        <input  class=\"btn btn-danger\" type=\"submit\" name=\"button3\" value=\"Remove\"/>
                                                     </form>
                                                 </div>
                                             </div>
