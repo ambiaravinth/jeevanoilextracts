@@ -14,6 +14,11 @@
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
@@ -35,7 +40,17 @@
 				<li class="propClone" ><a href="public_home.php" >Home</a></li>
 				<li class="propClone"><a href="product.php">Product</a></li>
 				<li class="propClone"><a href="cart.php" >Cart</a></li>
-				<li class="propClone"><a href="back/logout.php"> <?php echo $_SESSION["current_username"]; ?> </a></li>
+				<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<?php echo $_SESSION["current_username"]; ?> 
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li style="margin-top:4%;"><a class="dropdown-item" href="profile.php"> <img src="https://img.icons8.com/ios-glyphs/24/undefined/user--v1.png"/><span style="margin-left:10%;">My Profile</span></a></li>
+                         
+                          <li><hr class="dropdown-divider"></li>
+                          <li style="margin-top:-4%;"><a class="dropdown-item" href="back/logout.php"><img  src="https://img.icons8.com/material-outlined/24/undefined/exit.png"/>    <span style="margin-left:10%;">Logout</span> </a></li>
+                        </ul>
+                      </li>
 			</ul>
 		</div>
 	</div>
@@ -79,7 +94,8 @@
 					<img src="./images/coco_img.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
 					  <h5 class="card-title">Coconut Oil</h5>
-					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made from all natural ingredients its easy to use, buy yours online today.</p>
+					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made from all natural 
+						ingredients its easy to use, buy yours online today.</p>
 					
 					  <form action="back/product_process.php" method="POST">
 						<input type="hidden" name="product" value="1001">
