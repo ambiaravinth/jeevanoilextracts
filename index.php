@@ -98,7 +98,7 @@
                  Rice Bran Oil (Crude), which is extracted through refining the bran of the rice kernel.
 							</p>
 							<p>
-								<a href="product.php" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
+								<a href="login.php" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
 								
 							</p>
 						</div>
@@ -127,7 +127,7 @@
 
 							</p>
 							<p>
-								<a href="product.php" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
+								<a href="login.php" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
 							
 							</p>
 						</div>
@@ -154,7 +154,7 @@
 								from all natural ingredients its easy to use, buy yours online today.
 							</p>
 							<p>
-								<a href="product.php" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
+								<a href="login.php" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
 						
 							</p>
 						</div>
