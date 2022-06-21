@@ -96,8 +96,8 @@
 
 	
 	
-	<!-- LATEST offers =============================-->
-	<section class="item content">
+<!-- LATEST offers =============================-->
+<section class="item content">
 	<div class="container">
 		<div class="underlined-title">
 			<div class="editContent">
@@ -122,8 +122,8 @@
                  Rice Bran Oil (Crude), which is extracted through refining the bran of the rice kernel.
 							</p>
 							<p>
-								<a href="checkout.html" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
-								<a href="product.html" class="learn-more detailslearn"><i class="fa fa-link"></i> Details</a>
+								<a href="product.php" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
+								
 							</p>
 						</div>
 						<span class="maxproduct"><img src="./images/rice_img.jpg" alt=""></span>
@@ -151,8 +151,8 @@
 
 							</p>
 							<p>
-								<a href="#" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
-								<a href="#" class="learn-more detailslearn"><i class="fa fa-link"></i> Details</a>
+								<a href="product.php" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
+							
 							</p>
 						</div>
 						<span class="maxproduct"><img src="./images/coco_img.jpg" height="80%" alt=""></span>
@@ -178,8 +178,8 @@
 								from all natural ingredients its easy to use, buy yours online today.
 							</p>
 							<p>
-								<a href="#" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
-								<a href="#" class="learn-more detailslearn"><i class="fa fa-link"></i> Details</a>
+								<a href="product.php" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
+						
 							</p>
 						</div>
 						<span class="maxproduct"><img src="./images/neem_img.jpg" alt=""></span>
@@ -263,6 +263,19 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/anim.js"></script>
 
+<script>
+//----HOVER CAPTION---//	  
+jQuery(document).ready(function ($) {
+	$('.fadeshop').hover(
+		function(){
+			$(this).find('.captionshop').fadeIn(150);
+		},
+		function(){
+			$(this).find('.captionshop').fadeOut(150);
+		}
+	);
+});
+</script>
 	
 </body>
 </html>
