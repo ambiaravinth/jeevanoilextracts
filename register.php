@@ -1,17 +1,24 @@
-echo "<script>alert('Verified Email Address')</script>";
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="">
+<script src="alert/dist/sweetalert-dev.js"></script>
+  <link rel="stylesheet" href="alert/dist/sweetalert.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
+<script src="jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 </head>
 <body>
+
+
+
 
 <!-- HEADER =============================-->
 <header class="item header margin-top-0">
@@ -74,7 +81,7 @@ echo "<script>alert('Verified Email Address')</script>";
 					<input type="email" name="ip_email" placeholder="Email Id" >
                     <input type="password" name="ip_password" placeholder="New Password">
                     <input type="text" name="userpassword" placeholder="Confirm Password">
-					<input type="submit" class="clearfix btn">
+					<input type="submit" onclick="JSalert()"class="clearfix btn">
 					<!--<input type="submit" id="submit" class="clearfix btn" value="Register "> -->                 
 				</div>
 			</form>
