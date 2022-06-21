@@ -50,7 +50,7 @@
 						<?php echo $_SESSION["current_username"]; ?> 
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li style="margin-top:4%;"><a class="dropdown-item" href="#"> <img src="https://img.icons8.com/ios-glyphs/24/undefined/user--v1.png"/><span style="margin-left:10%;">My Profile</span></a></li>
+                          <li style="margin-top:4%;"><a class="dropdown-item" href="profile.php"> <img src="https://img.icons8.com/ios-glyphs/24/undefined/user--v1.png"/><span style="margin-left:10%;">My Profile</span></a></li>
                          
                           <li><hr class="dropdown-divider"></li>
                           <li style="margin-top:-4%;"><a class="dropdown-item" href="back/logout.php"><img  src="https://img.icons8.com/material-outlined/24/undefined/exit.png"/>    <span style="margin-left:10%;">Logout</span> </a></li>
@@ -97,7 +97,7 @@
 	
 	
 	<!-- LATEST offers =============================-->
-<section class="item content">
+	<section class="item content">
 	<div class="container">
 		<div class="underlined-title">
 			<div class="editContent">
