@@ -104,14 +104,14 @@
             <div class="row">
             <div class="col-md-4">
               <label for="fname" class="form-label">Username :</label>
-              <input type="text" class="form-control" id="fname" name="user_name" />
+              <input type="text" class="form-control" id="name" name="user_name" />
             </div>
             <div class="col-md-4">
               <label for="name" class="form-label">Password :</label>
               <input
                 type="text"
                 class="form-control"
-                id="name"
+                id="pass"
                 name="password"
               />
             </div>
@@ -125,7 +125,7 @@
 		<div class="row" style="margin-top:2%;" >
             <div class="col-md-4">
               <label for="names" class="form-label">Name:</label>
-              <input type="text" class="form-control" id="fname" name="name1" />
+              <input type="text" class="form-control" id="names" name="name1" />
             </div>
             <div class="col-md-4">
               <label for="pan" class="form-label">PAN NO :</label>
