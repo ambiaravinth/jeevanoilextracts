@@ -94,7 +94,8 @@
 					<img src="./images/coco_img.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
 					  <h5 class="card-title">Coconut Oil</h5>
-					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made from all natural ingredients its easy to use, buy yours online today.</p>
+					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made from all natural 
+						ingredients its easy to use, buy yours online today.</p>
 					
 					  <form action="back/product_process.php" method="POST">
 						<input type="hidden" name="product" value="1001">
