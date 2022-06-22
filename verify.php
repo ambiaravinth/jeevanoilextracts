@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +11,17 @@
 <link href="css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script>
+  $(window).on("load",function()
+  {
+    $(".loader").fadeOut("slow");
+  })
+</script> 
 </head>
 <body>
+
+<div class="loader"></div>
 
 <!-- HEADER =============================-->
 <header class="item header margin-top-0">
@@ -110,6 +121,7 @@
 </body>
 </html>
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -136,7 +148,7 @@ if(isset($_POST['submit']))
     $mail->Username   = 'maheshsriramt.19it@kongu.edu';                    
     $mail->Password   = '10-Aug-02';                               
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;       
-    $mail->Port       = 587;                                   
+    $mail->Port       = 587;                               
 
     
     $mail->setFrom($email, 'JEEVAN SOLVENT EXTRACTS PVT.LTD');
@@ -669,8 +681,8 @@ if(isset($_POST['submit']))
     
 
     $mail->send();
-    echo "<script>alert('Verification sent to your email address')</script>";
+    echo '<script type="text/javascript">sweetAlert("Verification sent!","Successfully verification mail sent to your mail address","success")</script>';
 } catch (Exception $e) {
-    echo "<script>alert('Verification not sent to your email address. Mailer Error: {$mail->ErrorInfo}')</script>";
+  echo '<script type="text/javascript">sweetAlert("Failed to send!","Kindly check your mail address","error")</script>';
 }
 }?>
