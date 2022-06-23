@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,7 +48,7 @@ function validateForm()
 </script>	
 </head>
 <body>
-
+echo '<script>sweetAlert("Verification Success!","Keep safe of your password","success")</script>';
  
 <!-- HEADER =============================-->
 <header class="item header margin-top-0">
