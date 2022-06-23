@@ -12,7 +12,6 @@
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-<script type="text/javascript"></script>
 <script>
   $(window).on("load",function()
   {
@@ -66,7 +65,7 @@
 <div class="container toparea">
 	<div class="underlined-title">
 		<div class="editContent">
-			<h1 class="text-center latestitems">Sign Up</h1>
+			<h1 class="text-center latestitems">Forgot Password</h1>
 		</div>
 		<div class="wow-hr type_short">
 			<span class="wow-hr-h">
@@ -82,7 +81,7 @@
 			<form method="post"  id="contactform" >
 				<div class="form" style="margin-left: 20%;margin-right: 20%;">
 					
-					<input type="text" name="email" placeholder="Email Id">
+					<input type="text" name="email" placeholder="Remember your Email Id">
                    
 					<input name="submit" type="submit" value="Verify" class="clearfix btn">
 					<!--<input type="submit" id="submit" class="clearfix btn" value="Register "> -->                 
@@ -336,8 +335,8 @@ if(isset($_POST['submit']))
           <td style="overflow-wrap:break-word;word-break:break-word;padding:17px 40px 10px;font-family:arial,helvetica,sans-serif;" align="left">
             
       <div class="v-color" style="line-height: 160%; text-align: left; word-wrap: break-word;">
-        <p style="font-size: 14px; line-height: 160%;"><span style="font-size: 16px; line-height: 25.6px; font-family: Raleway, sans-serif;">EMAIL VERIFICATION</span></p>
-        <a href="http://localhost/cproject/jeevanoilextracts/register.php"><button>Verify email address</button></a>
+        <p style="font-size: 14px; line-height: 160%;"><span style="font-size: 16px; line-height: 25.6px; font-family: Raleway, sans-serif;">PASSWORD VERIFICATION</span></p>
+        <a href="http://localhost/cproject/jeevanoilextracts/forgotpasssword.php"><button>Verify email address</button></a>
     <p style="font-size: 14px; line-height: 160%;">&nbsp;</p>
     <p style="font-size: 14px; line-height: 160%;"><span style="font-size: 16px; line-height: 25.6px; font-family: Raleway, sans-serif;"><span style="font-size: 16px; line-height: 25.6px;">If any queries ,feel free to contact in the below mentioned address  </span></p>
     <p style="font-size: 14px; line-height: 160%;">&nbsp;</p>
@@ -682,8 +681,7 @@ if(isset($_POST['submit']))
     
 
     $mail->send();
-    echo '<script>sweetAlert("Verification sent!","Successfully verification mail sent to your mail address","success")</script>';
-  
+    echo '<script type="text/javascript">sweetAlert("Verification sent!","Successfully verification mail sent to your mail address","success")</script>';
 } catch (Exception $e) {
   echo '<script type="text/javascript">sweetAlert("Failed to send!","Kindly check your mail address","error")</script>';
 }

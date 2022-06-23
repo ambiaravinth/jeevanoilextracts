@@ -20,16 +20,16 @@
         
         if($usertype == "admin"){
             if($username=="abiabi"){
-                echo "<script> alert('login Succesfull admin'); document.location='../table.php' </script>";
+                echo "<script> alert('Login Succesfull Admin'); document.location='../table.php' </script>";
             }else{
-                echo "<script> alert('login Succesfull admin'); document.location='../admin.php' </script>";
+                echo "<script> alert('Login Succesfull Admin'); document.location='../admin.php' </script>";
             }    
         }
         else{
-            echo "<script> alert('login Succesfull public'); document.location='../public_home.php' </script>";
+            echo "<script> alert('Login Succesfull'); document.location='../public_home.php' </script>";
         }
     }
     else {
-        echo "<script> alert('Login Unsuccesfull please login again'); document.location='../login.php' </script>";
+        echo '<script type="text/javascript">sweetAlert("Failed!","Kindly try again","error")</script>';
     }
 ?>
