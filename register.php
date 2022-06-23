@@ -78,7 +78,12 @@
 			<form method="post" action="back/reg_process.php" id="contactform" >
 				<div class="form" style="margin-left: 20%;margin-right: 20%;">
 					<input type="text" name="ip_username" placeholder="Username">
+					<input type="text" name="ip_name" placeholder="Name">
+					<input type="text" name="ip_mobile" placeholder="Mobile Number">
 					<input type="email" name="ip_email" placeholder="Email Id" >
+					<input type="text" name="ip_pan" placeholder="PAN number">
+					<input type="text" name="ip_gst" placeholder="GST number">
+					<textarea name="ip_address" placeholder="Address"></textarea>
                     <input type="password" name="ip_password" placeholder="New Password">
                     <input type="text" name="userpassword" placeholder="Confirm Password">
 					<input type="submit" onclick="JSalert()"class="clearfix btn">

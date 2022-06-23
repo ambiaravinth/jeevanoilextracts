@@ -35,7 +35,7 @@
 			<a href="#"><img src="./images/download.jpg" alt="" width="15%" style="float: left"></a>
 			<a href="#" class="navbar-brand" style="color: rgb(243, 112, 112); float:left ;text-align: left;">  Jeevan Solvent</a>
 		</div>
-		<div id="navbar-collapse-02" class="collapse navbar-collapse">
+        <div id="navbar-collapse-02" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
 				<li class="propClone" ><a href="admin1.html" >Home</a></li>
 				<!--  <li class="propClone"><a href="###">Product</a></li>
@@ -89,7 +89,7 @@
 <div class="container toparea">
 	<div class="underlined-title">
 		<div class="editContent">
-			<h1 class="text-center latestitems">Products List</h1>
+			<h1 class="text-center latestitems">Users List</h1>
 		</div>
 		<div class="wow-hr type_short">
 			<span class="wow-hr-h">
@@ -103,9 +103,38 @@
 </section>
 
 
-
 <!-- USERS TABLE -->
+<div class="row" style="margin-left:15%;">
+    <div class="col-md-10">
 
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Users</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>mahesh</td>
+                <td><button class="btn btn-warning"><i class="fa fa-trash"></i><span style="margin-left:15% ;">Remove</span></button></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Niresh</td>
+                <td><button class="btn btn-warning"><i class="fa fa-trash"></i><span style="margin-left:15% ;">Remove</span></button></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>aravinth</td>
+                <td><button class="btn btn-warning"><i class="fa fa-trash"></i><span style="margin-left:15% ;">Remove</span></button></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
 
 
 
