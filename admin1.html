@@ -9,6 +9,12 @@
 <link href="css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -23,17 +29,41 @@
 			<i class="fa fa-bars"></i>
 			<span class="sr-only">Toggle navigation</span>
 			</button>
-			<a href="index.php"><img src="./images/download.jpg" alt="" width="15%" style="float: left"></a>
-			<a href="index.php" class="navbar-brand" style="color: rgb(243, 112, 112); ">Jeevan Solvent</a>
+			<a href="#"><img src="./images/download.jpg" alt="" width="15%" style="float: left"></a>
+			<a href="#" class="navbar-brand" style="color: rgb(243, 112, 112); ">Jeevan Solvent</a>
 			
 		</div>
 		<div id="navbar-collapse-02" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="propClone" ><a href="index.php" >Home</a></li>
+				<li class="propClone" ><a href="admin1.html" >Home</a></li>
 				<!--  <li class="propClone"><a href="###">Product</a></li>
 				<li class="propClone"><a href="###" >Checkout</a></li> -->
-				<li class="propClone"><a href="aboutus.php" >About us</a></li>
-				<li class="propClone"><a href="login.php" >Login</a></li>
+                <li class="propClone"><a href="users.html" >View Users</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   PRODUCTS
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li style="margin-top:4%;"><a class="dropdown-item" href="product_list.html"> <span style="margin-left:10%;">View Products</span></a></li>
+                     
+                      <li><hr class="dropdown-divider"></li>
+                      <li style="margin-top:-4%;"><a class="dropdown-item" href="admin_product.html">    <span style="margin-left:10%;">Manage Products</span> </a></li>
+                    </ul>
+                  </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <?php echo $_SESSION["current_username"]; ?> 
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li style="margin-top:4%;"><a class="dropdown-item" href="profile.php"> <img src="https://img.icons8.com/ios-glyphs/24/undefined/user--v1.png"/><span style="margin-left:10%;">My Profile</span></a></li>
+                     
+                      <li><hr class="dropdown-divider"></li>
+                      <li style="margin-top:-4%;"><a class="dropdown-item" href="back/logout.php"><img  src="https://img.icons8.com/material-outlined/24/undefined/exit.png"/>    <span style="margin-left:10%;">Logout</span> </a></li>
+                    </ul>
+                  </li>
+				
 			</ul>
 		</div>
 	</div>
@@ -72,108 +102,6 @@
 
 	
 	
-	<!-- LATEST offers =============================-->
-<section class="item content">
-	<div class="container">
-		<div class="underlined-title">
-			<div class="editContent">
-				<h1 class="text-center latestitems">LATEST OFFERS</h1>
-			</div>
-			<div class="wow-hr type_short">
-				<span class="wow-hr-h">
-				<i class="fa fa-star"></i>
-				<i class="fa fa-star"></i>
-				<i class="fa fa-star"></i>
-				</span>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-4">
-				<div class="productbox">
-					<div class="fadeshop">
-						<div class="captionshop text-center" style="display: none;">
-							<h3>Rice Bran Oil</h3>
-							<p>
-                We hold expertise in offering an extensive range of
-                 Rice Bran Oil (Crude), which is extracted through refining the bran of the rice kernel.
-							</p>
-							<p>
-								<a href="login.php" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
-								
-							</p>
-						</div>
-						<span class="maxproduct"><img src="./images/rice_img.jpg" alt=""></span>
-					</div>
-					<div class="product-details">
-						<a href="#">
-						<h1>Rice Bran Oil</h1>
-						</a>
-						<span class="price">
-						<span class="edd_price">Rs.160/litre----(10% offer)----</span>
-						</span>
-					</div>
-				</div>
-			</div>
-			<!-- /.productbox -->
-			<div class="col-md-4">
-				<div class="productbox">
-					<div class="fadeshop">
-						<div class="captionshop text-center" style="display: none;">
-							<h3>Coconut Oil</h3>
-							<p>
-								Our range of Coconut Oils are 100% organic and versatile to use, made 
-								from all natural ingredients its easy to use, buy yours online today.
-
-
-							</p>
-							<p>
-								<a href="login.php" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
-							
-							</p>
-						</div>
-						<span class="maxproduct"><img src="./images/coco_img.jpg" height="80%" alt=""></span>
-					</div>
-					<div class="product-details">
-						<a href="#">
-						<h1>Coconut Oil</h1>
-						</a>
-						<span class="price">
-						<span class="edd_price">Rs.100/litre----(5% offer)----</span>
-						</span>
-					</div>
-				</div>
-			</div>
-			<!-- /.productbox -->
-			<div class="col-md-4">
-				<div class="productbox">
-					<div class="fadeshop">
-						<div class="captionshop text-center" style="display: none;">
-							<h3>Neem Oil</h3>
-							<p>
-								Our range of Neem oil are 100% organic and versatile to use, made 
-								from all natural ingredients its easy to use, buy yours online today.
-							</p>
-							<p>
-								<a href="login.php" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
-						
-							</p>
-						</div>
-						<span class="maxproduct"><img src="./images/neem_img.jpg" alt=""></span>
-					</div>
-					<div class="product-details">
-						<a href="#">
-						<h1>Neem Oil</h1>
-						</a>
-						<span class="price">
-						<span class="edd_price">Rs.220/litre----(15% offer)----</span>
-						</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-</section>
 
 
 
