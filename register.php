@@ -64,7 +64,7 @@ function validateForm()
 }
 </script>
 <body>
-
+echo '<script>sweetAlert("Verification Success!","Register your New Account","success")</script>';
 <!-- HEADER =============================-->
 <header class="item header margin-top-0">
 <div class="wrapper">
