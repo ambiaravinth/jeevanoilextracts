@@ -336,7 +336,7 @@ if(isset($_POST['submit']))
             
       <div class="v-color" style="line-height: 160%; text-align: left; word-wrap: break-word;">
         <p style="font-size: 14px; line-height: 160%;"><span style="font-size: 16px; line-height: 25.6px; font-family: Raleway, sans-serif;">PASSWORD VERIFICATION</span></p>
-        <a href="http://localhost/cproject/jeevanoilextracts/forgotpasssword.php"><button>Verify email address</button></a>
+        <a href="http://localhost/cproject/jeevanoilextracts/forgotpassword.php"><button>Verify email address</button></a>
     <p style="font-size: 14px; line-height: 160%;">&nbsp;</p>
     <p style="font-size: 14px; line-height: 160%;"><span style="font-size: 16px; line-height: 25.6px; font-family: Raleway, sans-serif;"><span style="font-size: 16px; line-height: 25.6px;">If any queries ,feel free to contact in the below mentioned address  </span></p>
     <p style="font-size: 14px; line-height: 160%;">&nbsp;</p>

@@ -9,6 +9,7 @@
 <link href="css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 </head>
 <body>
 
@@ -111,9 +112,9 @@
 			
 			<form method="post" id="contactform">
 				<div class="form">
-					<input type="text" name="name" placeholder="Your Name *">
-					<input type="text" name="email" placeholder="Your E-mail Address *">
-					<textarea name="message" rows="5" placeholder="Type your Message *"></textarea>
+					<input type="text" name="name" placeholder="Your Name *" required>
+					<input type="email" name="email" placeholder="Your E-mail Address *" required>
+					<textarea name="message" rows="5" placeholder="Type your Message *" required></textarea>
 					<input name="submit" type="submit" class="clearfix btn" value="Send">
 				</div>
 			</form>
@@ -188,8 +189,8 @@ if(isset($_POST['submit']))
     $mail->isSMTP();                                           
     $mail->Host       = 'smtp.gmail.com';                     
     $mail->SMTPAuth   = true;                                   
-    $mail->Username   = 'nireshn.19it@kongu.edu';                    
-    $mail->Password   = '01-Jan-01';                               
+    $mail->Username   = 'maheshsriramt.19it@kongu.edu';                    
+    $mail->Password   = '10-Aug-02';                               
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;       
     $mail->Port       = 587;                                   
 
@@ -723,8 +724,8 @@ if(isset($_POST['submit']))
     
 
     $mail->send();
-    echo "<script>alert('Message has been send')</script>";
+    echo '<script type="text/javascript">sweetAlert("Query Sent!","Kindly wait for the reply","success")</script>';
 } catch (Exception $e) {
-    echo "<script>alert('Message could not be sent. Mailer Error: {$mail->ErrorInfo}')</script>";
+  echo '<script type="text/javascript">sweetAlert("Query failed to Sent!","Kindly retry after some time","error")</script>';
 }
 }?>

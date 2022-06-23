@@ -9,9 +9,46 @@
 <link href="css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script>
+function validateForm() 
+{
+	var c = document.forms["myForm"]["newpassword"].value;
+  var d = document.forms["myForm"]["confirmpassword"].value;
+  
+	if(c!=d)
+    {
+	sweetAlert("Retype Correctly!","Make sure that Same Password ","warning");
+    return false;
+    }
+	if(!((c.length>=6)&&(c.length<=20)))
+  {
+	sweetAlert("Retype Correctly!","Make sure that password only between 6 to 20 characters ","warning");
+    return false;
+  }
+  
+  if (c.search(/[a-z]/) < 0) {
+	sweetAlert("Retype Correctly!","Make sure that Password contains a-z characters ","warning");
+    return false;
+   }
+	if (c.search(/[A-Z]/) < 0) {
+	sweetAlert("Retype Correctly!","Make sure that Password contains A-Z characters ","warning");
+    return false;
+    }
+    if (c.search(/[0-9]/) < 0) {
+		sweetAlert("Retype Correctly!","Make sure that Password contains 0-9 characters ","warning");
+    return false;
+	}
+	if (c.search(/[!@#\$%\^&\*_]/) < 0) {
+		sweetAlert("Retype Correctly!","Make sure that Password entered Special Characters ","warning");
+    return false;
+	}	
+}
+</script>	
 </head>
 <body>
 
+ 
 <!-- HEADER =============================-->
 <header class="item header margin-top-0">
 <div class="wrapper">
@@ -66,11 +103,11 @@
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2">
 			
-			<form method="post" action="back/login_process.php" id="contactform">
+			<form method="post" name="myForm"  onsubmit="return validateForm()"action="back/login_process.php" id="contactform">
 				<div class="form" style="margin-left: 20%;margin-right: 20%;">
 					<input type="email" name="ip_username" >
 					<input type="password" name="newpassword" placeholder="Enter your New Password" required>
-					<input type="password" name="confirmpassword" placeholder="Re-enter your Password" required>
+					<input type="text" name="confirmpassword" placeholder="Re-enter your Password" required>
                     </br><input type="submit" class="clearfix btn" value="Next">
 				</div>
 			</form>
