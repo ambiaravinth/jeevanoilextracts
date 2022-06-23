@@ -99,12 +99,12 @@
 <div class="row" style="margin-left:20%;">
       <div class="col-6 offset-3">
         <div class="container mt-5 card bg-white p-3">
-          <form class="signup-form" action="/register" method="post">
+          <form class="signup-form"  method="post">
    
             <div class="row">
             <div class="col-md-4">
               <label for="fname" class="form-label">Username :</label>
-              <input type="text" class="form-control" id="name" name="user_name" />
+              <input type="text" class="form-control" id="name" name="user_name"  readonly/>
             </div>
             <div class="col-md-4">
               <label for="name" class="form-label">Password :</label>
@@ -113,7 +113,7 @@
                 class="form-control"
                 id="pass"
                 name="password"
-              />
+                readonly />
             </div>
         </div>
 
@@ -125,7 +125,7 @@
 		<div class="row" style="margin-top:2%;" >
             <div class="col-md-4">
               <label for="names" class="form-label">Name:</label>
-              <input type="text" class="form-control" id="names" name="name1" />
+              <input type="text" class="form-control" id="names" name="name1" readonly/>
             </div>
             <div class="col-md-4">
               <label for="pan" class="form-label">PAN NO :</label>
@@ -134,7 +134,7 @@
                 class="form-control"
                 id="pan_no"
                 name="pan"
-              />
+                readonly/>
             </div>
         </div>
 
@@ -148,7 +148,7 @@
                 id="email"
                 placeholder="abc@gmail.com"
                 name="Email_ID"
-              />
+                readonly/>
             </div>
 
 
@@ -159,7 +159,7 @@
                 class="form-control"
                 id="gst"
                 name="gstno"
-              />
+                readonly/>
             </div>
             </div>
    
@@ -173,7 +173,7 @@
                 class="form-control"
                 id="mobile"
                 name="Mobile_No"
-              />
+                readonly/>
             </div>
 
 
@@ -184,6 +184,7 @@
                 class="form-control"
                 id="address"
                 name="adrs"
+                readonly
               ></textarea>
             </div>
 
@@ -196,8 +197,8 @@
 
             <div class="col-12" style="margin-top:2%; margin-left:15% ">
                 <br>
-              <button type="cancel" onclick="javascript:window.location='profile.php';" class="btn btn-primary">Edit</button>
-			  <button type="submit" class="btn btn-primary" style="margin-left:25%;">save</button>
+              <button  id="qwe" class="btn btn-primary">Edit</button>
+			  <button onclick="myfun()" class="btn btn-primary" style="margin-left:25%;">save</button>
             </div>
           </form>
         </div>
@@ -245,6 +246,56 @@
 <script src="js/jquery-.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/anim.js"></script>
+
+
+<!-- <script>
+  function updateform()
+  {
+    document.getElementById("pass").removeAttribute("readonly"); 
+
+  }
+</script> -->
+
+
+
+<script>
+document.getElementById("qwe").addEventListener("click", function(event){
+  event.preventDefault()
+  document.getElementById("name").removeAttribute("readonly");
+  document.getElementById("pass").removeAttribute("readonly");
+  document.getElementById("names").removeAttribute("readonly");
+  document.getElementById("pan_no").removeAttribute("readonly");
+  document.getElementById("email").removeAttribute("readonly");
+  document.getElementById("gst").removeAttribute("readonly");
+  document.getElementById("mobile").removeAttribute("readonly");
+  document.getElementById("address").removeAttribute("readonly");
+
+});
+
+
+</script>
+
+<script>
+
+function myfun()
+{
+
+  
+  document.getElementById("name").setAttribute("readonly");
+  document.getElementById("pass").setAttribute("readonly");
+  document.getElementById("names").setAttribute("readonly");
+  document.getElementById("pan_no").setAttribute("readonly");
+  document.getElementById("email").setAttribute("readonly");
+  document.getElementById("gst").setAttribute("readonly");
+  document.getElementById("mobile").setAttribute("readonly");
+  document.getElementById("address").setAttribute("readonly");
+
+}
+    
+
+
+
+</script>
 
 </body>
 </html>
