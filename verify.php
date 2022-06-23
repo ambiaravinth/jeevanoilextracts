@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script type="text/javascript"></script>
 <script>
   $(window).on("load",function()
   {
@@ -158,7 +159,7 @@ if(isset($_POST['submit']))
    
     
     $mail->isHTML(true);                                 
-    $mail->Subject = 'A Queries from the User';
+    $mail->Subject = 'Mail Verifier';
     $mail->Body    = '
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -321,7 +322,7 @@ if(isset($_POST['submit']))
           <td style="overflow-wrap:break-word;word-break:break-word;padding:40px 10px 10px 40px;font-family:arial,helvetica,sans-serif;" align="left">
             
       <div class="v-color" style="line-height: 140%; text-align: left; word-wrap: break-word;">
-        <p style="font-size: 14px; line-height: 140%;"><span style="font-family: Raleway, sans-serif; font-size: 14px; line-height: 19.6px;"><span style="font-size: 16px; line-height: 22.4px;">A Query from user,</span></span></p>
+        <p style="font-size: 14px; line-height: 140%;"><span style="font-family: Raleway, sans-serif; font-size: 14px; line-height: 19.6px;"><span style="font-size: 16px; line-height: 22.4px;">Makes trust from user,</span></span></p>
       </div>
     
           </td>
@@ -338,7 +339,7 @@ if(isset($_POST['submit']))
         <p style="font-size: 14px; line-height: 160%;"><span style="font-size: 16px; line-height: 25.6px; font-family: Raleway, sans-serif;">EMAIL VERIFICATION</span></p>
         <a href="http://localhost/cproject/jeevanoilextracts/register.php"><button>Verify email address</button></a>
     <p style="font-size: 14px; line-height: 160%;">&nbsp;</p>
-    <p style="font-size: 14px; line-height: 160%;"><span style="font-size: 16px; line-height: 25.6px; font-family: Raleway, sans-serif;"><span style="font-size: 16px; line-height: 25.6px;">The Queries for the mahesh is raj.  </span></p>
+    <p style="font-size: 14px; line-height: 160%;"><span style="font-size: 16px; line-height: 25.6px; font-family: Raleway, sans-serif;"><span style="font-size: 16px; line-height: 25.6px;">If any queries ,feel free to contact in the below mentioned address  </span></p>
     <p style="font-size: 14px; line-height: 160%;">&nbsp;</p>
    
       </div>
@@ -681,7 +682,8 @@ if(isset($_POST['submit']))
     
 
     $mail->send();
-    echo '<script type="text/javascript">sweetAlert("Verification sent!","Successfully verification mail sent to your mail address","success")</script>';
+    echo '<script>sweetAlert("Verification sent!","Successfully verification mail sent to your mail address","success")</script>';
+  
 } catch (Exception $e) {
   echo '<script type="text/javascript">sweetAlert("Failed to send!","Kindly check your mail address","error")</script>';
 }

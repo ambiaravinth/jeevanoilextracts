@@ -1,40 +1,27 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="">
-<script src="alert/dist/sweetalert-dev.js"></script>
-  <link rel="stylesheet" href="alert/dist/sweetalert.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
-<script src="jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-
-</head>
-
-
 <script>
 function validateForm() 
 {
-  var a = document.forms["myForm"]["ip_username"].value;
-  var b = document.forms["myForm"]["ip_mobile"].value;
-  var c = document.forms["myForm"]["ip_password"].value;
-  var d = document.forms["myForm"]["userpassword"].value;
+	var c = document.forms["myForm"]["newpassword"].value;
+  var d = document.forms["myForm"]["confirmpassword"].value;
   
-  if (!((a.length>=3)&&(a.length<=30))) {
-    sweetAlert("Retype Correctly!","Make sure that username only between 3 to 30 characters ","warning");
+	if(c!=d)
+    {
+	sweetAlert("Retype Correctly!","Make sure that Same Password ","warning");
     return false;
-  }
-  if (!(b.length==10)) {
-    sweetAlert("Retype Correctly!","Make sure that Mobile Number correctly ","warning");
-    return false;
-  }
-  if(!((c.length>=6)&&(c.length<=20)))
+    }
+	if(!((c.length>=6)&&(c.length<=20)))
   {
 	sweetAlert("Retype Correctly!","Make sure that password only between 6 to 20 characters ","warning");
     return false;
@@ -56,15 +43,12 @@ function validateForm()
 		sweetAlert("Retype Correctly!","Make sure that Password entered Special Characters ","warning");
     return false;
 	}	
-    if(c!=d)
-    {
-	sweetAlert("Retype Correctly!","Make sure that Same Password ","warning");
-    return false;
-    }
 }
-</script>
+</script>	
+</head>
 <body>
 
+ 
 <!-- HEADER =============================-->
 <header class="item header margin-top-0">
 <div class="wrapper">
@@ -75,8 +59,8 @@ function validateForm()
 			<i class="fa fa-bars"></i>
 			<span class="sr-only">Toggle navigation</span>
 			</button>
-			<a href="#"><img src="./images/download.jpg" alt="" width="15%" style="float: left"></a>
-			<a href="#" class="navbar-brand" style="color: rgb(243, 112, 112); float:left ;text-align: left;">  Jeevan Solvent</a>
+			<a href="index.html"><img src="./images/download.jpg" alt="" width="15%" style="float: left"></a>
+			<a href="index.html" class="navbar-brand" style="color: rgb(243, 112, 112); float:left ;text-align: left;">  Jeevan Solvent</a>
 		</div>
 		<div id="navbar-collapse-02" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
@@ -84,7 +68,6 @@ function validateForm()
 				<!--  <li class="propClone"><a href="###">Product</a></li>
 				<li class="propClone"><a href="###" >Checkout</a></li> -->
 				<li class="propClone"><a href="aboutus.php" >About us</a></li>
-				<li class="propClone"><a href="login.php" >Login</a></li>
 			</ul>
 		</div>
 	</div>
@@ -107,7 +90,7 @@ function validateForm()
 <div class="container toparea">
 	<div class="underlined-title">
 		<div class="editContent">
-			<h1 class="text-center latestitems">Sign Up</h1>
+			<h1 class="text-center latestitems">Login</h1>
 		</div>
 		<div class="wow-hr type_short">
 			<span class="wow-hr-h">
@@ -120,19 +103,12 @@ function validateForm()
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2">
 			
-			<form method="post"name="myForm" onsubmit="return validateForm()" action="back/reg_process.php" id="contactform" >
+			<form method="post" name="myForm"  onsubmit="return validateForm()"action="back/login_process.php" id="contactform">
 				<div class="form" style="margin-left: 20%;margin-right: 20%;">
-					<input type="text" name="ip_username" placeholder="Username *" >
-					<input type="text" name="ip_name" placeholder="Name *" >
-					<input type="text" name="ip_mobile" placeholder="Mobile Number *" >
-					<input type="email" name="ip_email" placeholder="Email Id *" >
-					<input type="text" name="ip_pan" placeholder="PAN number">
-					<input type="text" name="ip_gst" placeholder="GST number">
-					<textarea name="ip_address" placeholder="Address *"></textarea>
-                    <input type="password" name="ip_password" placeholder="New Password *">
-                    <input type="text" name="userpassword" placeholder="Confirm Password *">
-					<input type="submit" class="clearfix btn">
-					<!--<input type="submit" id="submit" class="clearfix btn" value="Register "> -->                 
+					<input type="email" name="ip_username" >
+					<input type="password" name="newpassword" placeholder="Enter your New Password" required>
+					<input type="text" name="confirmpassword" placeholder="Re-enter your Password" required>
+                    </br><input type="submit" class="clearfix btn" value="Next">
 				</div>
 			</form>
 		</div>

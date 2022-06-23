@@ -70,8 +70,11 @@
 				<div class="form" style="margin-left: 20%;margin-right: 20%;">
 					<input type="text" name="ip_username" placeholder="Username">
 					<input type="password" name="ip_password" placeholder="Password">
-                    <a href="verify.php" style="color: black;float: right;">Don't have an account ?</a>
-					<input type="submit" class="clearfix btn">
+					<div style="float:right">
+                    <a href="verify.php" style="color: blue;">Don't have an account ?</a></br>
+					<a href="emailverify.php" style="color: blue;float:right">Forgot Password ?</a></br>
+                    </div>
+                    </br><input type="submit" class="clearfix btn" value="Next">
 				</div>
 			</form>
 		</div>

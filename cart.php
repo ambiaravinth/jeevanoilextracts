@@ -212,7 +212,7 @@
 						<p1 style="padding-left: 40%;"><?php echo $total; ?></p1>
                     </div>
 					<hr>
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
+                    <?php echo '<a href="https://pages.razorpay.com/pl_JcdokhFWmldgcu/view?amount='.$total.'"><button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button></a> ';?>
                 </div>
             </div>
         </div>
