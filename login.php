@@ -22,8 +22,8 @@
 			<i class="fa fa-bars"></i>
 			<span class="sr-only">Toggle navigation</span>
 			</button>
-			<a href="index.html"><img src="./images/download.jpg" alt="" width="15%" style="float: left"></a>
-			<a href="index.html" class="navbar-brand" style="color: rgb(243, 112, 112); float:left ;text-align: left;">  Jeevan Solvent</a>
+			<a href="#"><img src="./images/download.jpg" alt="" width="15%" style="float: left"></a>
+			<a href="#" class="navbar-brand" style="color: rgb(243, 112, 112); float:left ;text-align: left;">  Jeevan Solvent</a>
 		</div>
 		<div id="navbar-collapse-02" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">

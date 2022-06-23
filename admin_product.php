@@ -1,3 +1,6 @@
+<?php
+	require_once 'back/session.php';
+?>
 
 <!DOCTYPE html>
 <html>
@@ -5,20 +8,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="">
-<script src="alert/dist/sweetalert-dev.js"></script>
-  <link rel="stylesheet" href="alert/dist/sweetalert.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
-<script src="jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
-
-
-
 
 <!-- HEADER =============================-->
 <header class="item header margin-top-0">
@@ -33,13 +35,37 @@
 			<a href="#"><img src="./images/download.jpg" alt="" width="15%" style="float: left"></a>
 			<a href="#" class="navbar-brand" style="color: rgb(243, 112, 112); float:left ;text-align: left;">  Jeevan Solvent</a>
 		</div>
-		<div id="navbar-collapse-02" class="collapse navbar-collapse">
+        <div id="navbar-collapse-02" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-			<li class="propClone" ><a href="index.php" >Home</a></li>
+				<li class="propClone" ><a href="admin1.html" >Home</a></li>
 				<!--  <li class="propClone"><a href="###">Product</a></li>
 				<li class="propClone"><a href="###" >Checkout</a></li> -->
-				<li class="propClone"><a href="aboutus.php" >About us</a></li>
-				<li class="propClone"><a href="login.php" >Login</a></li>
+                <li class="propClone"><a href="users.html" >View Users</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   PRODUCTS
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li style="margin-top:4%;"><a class="dropdown-item" href="product_list.html"> <span style="margin-left:10%;">View Products</span></a></li>
+                     
+                      <li><hr class="dropdown-divider"></li>
+                      <li style="margin-top:-4%;"><a class="dropdown-item" href="admin_product.html">    <span style="margin-left:10%;">Manage Products</span> </a></li>
+                    </ul>
+                  </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <?php echo $_SESSION["current_username"]; ?> 
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li style="margin-top:4%;"><a class="dropdown-item" href="profile.php"> <img src="https://img.icons8.com/ios-glyphs/24/undefined/user--v1.png"/><span style="margin-left:10%;">My Profile</span></a></li>
+                     
+                      <li><hr class="dropdown-divider"></li>
+                      <li style="margin-top:-4%;"><a class="dropdown-item" href="back/logout.php"><img  src="https://img.icons8.com/material-outlined/24/undefined/exit.png"/>    <span style="margin-left:10%;">Logout</span> </a></li>
+                    </ul>
+                  </li>
+				
 			</ul>
 		</div>
 	</div>
@@ -49,7 +75,7 @@
 			<div class="col-md-12 text-center">
 				<div class="text-pageheader">
 					<div class="subtext-image" data-scrollreveal="enter bottom over 1.7s after 0.0s">
-						 User Details
+						Users List 
 					</div>
 				</div>
 			</div>
@@ -57,12 +83,13 @@
 	</div>
 </div>
 </header>
+
 <!-- CONTENT =============================-->
 <section class="item content">
 <div class="container toparea">
 	<div class="underlined-title">
 		<div class="editContent">
-			<h1 class="text-center latestitems">Sign Up</h1>
+			<h1 class="text-center latestitems">Users List</h1>
 		</div>
 		<div class="wow-hr type_short">
 			<span class="wow-hr-h">
@@ -72,29 +99,39 @@
 			</span>
 		</div>
 	</div>
+</div>
+</section>
+
+
+
+<!-- USERS TABLE -->
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+<!-- CALL TO ACTION =============================-->
+<section class="content-block" style="background-color:#00bba7;">
+<div class="container text-center">
 	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2">
-			
-			<form method="post" action="back/reg_process.php" id="contactform" >
-				<div class="form" style="margin-left: 20%;margin-right: 20%;">
-					<input type="text" name="ip_username" placeholder="Username">
-					<input type="text" name="ip_name" placeholder="Name">
-					<input type="text" name="ip_mobile" placeholder="Mobile Number">
-					<input type="email" name="ip_email" placeholder="Email Id" >
-					<input type="text" name="ip_pan" placeholder="PAN number">
-					<input type="text" name="ip_gst" placeholder="GST number">
-					<textarea name="ip_address" placeholder="Address"></textarea>
-                    <input type="password" name="ip_password" placeholder="New Password">
-                    <input type="text" name="userpassword" placeholder="Confirm Password">
-					<input type="submit" onclick="JSalert()"class="clearfix btn">
-					<!--<input type="submit" id="submit" class="clearfix btn" value="Register "> -->                 
-				</div>
-			</form>
+		<div class="col-sm-10 col-sm-offset-1">
+			<div class="item" data-scrollreveal="enter top over 0.4s after 0.1s">
+				<h1 class="callactiontitle"> More energy for a better tomorrow </h1>
+			</div>
 		</div>
 	</div>
 </div>
-</div>
 </section>
+
 <!-- FOOTER =============================-->
 <div class="footer text-center">
 	<div class="container">
@@ -116,10 +153,11 @@
 		</div>
 	</div>
 </div>
-<!-- SCRIPTS =============================-->
+
+<!-- Load JS here for greater good =============================-->
 <script src="js/jquery-.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/anim.js"></script>
-<script src="js/validate.js"></script>
+
 </body>
 </html>
