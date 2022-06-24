@@ -37,14 +37,24 @@
 		</div>
 		<div id="navbar-collapse-02" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="propClone" ><a href="admin1.html" >Home</a></li>
+				<li class="propClone" ><a href="admin1.php" >Home</a></li>
 				<!--  <li class="propClone"><a href="###">Product</a></li>
 				<li class="propClone"><a href="###" >Checkout</a></li> -->
-                <li class="propClone"><a href="users.html" >View Users</a></li>
-                <li class="propClone"><a href="product_list.html" >Manage Products</a></li>
-
-
+                <li class="propClone"><a href="admin_users.php" >View Users</a></li>
                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   PRODUCTS
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li style="margin-top:4%;"><a class="dropdown-item" href="product_list.php"> <span style="margin-left:10%;">Manage Products</span></a></li>
+                     
+                     
+                    </ul>
+                  </li>
+
+
+
+                  <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <?php echo $_SESSION["current_username"]; ?> 
                     </a>

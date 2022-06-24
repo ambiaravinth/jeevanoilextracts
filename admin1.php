@@ -48,7 +48,7 @@ require_once 'back/session.php';
                    PRODUCTS
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li style="margin-top:4%;"><a class="dropdown-item" href="admin_product.php"> <span style="margin-left:10%;">Manage Products</span></a></li>
+                      <li style="margin-top:4%;"><a class="dropdown-item" href="product_list.php"> <span style="margin-left:10%;">Manage Products</span></a></li>
                      
                      
                     </ul>
