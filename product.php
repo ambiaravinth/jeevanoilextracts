@@ -100,7 +100,10 @@
 					  <form action="back/product_process.php" method="POST">
 						<input type="hidden" name="product" value="1001">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
+						<button class="btn btn-primary" id="pre" style="margin-left:5%">Rs.100</button>
+						<button class="btn btn-primary" id="ltr" style="margin-left:5%">1 Litre</button>
 					  </form>
+					  
 					</div>
 				  </div>
 			</div>
@@ -111,13 +114,15 @@
 				<div class="card" style="width:100%;">
 					<img src="./images/neem_img.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
-					  <h5 class="card-title">Coconut Oil</h5>
-					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made 
-						from all natural ingredients its easy to use, buy yours online today.</p>
+					  <h5 class="card-title">Neem Oil</h5>
+					  <p class="card-text">Our range of Neem oil are 100% organic and versatile to use, made 
+								from all natural ingredients its easy to use, buy yours online today.</p>
 					
 					  <form action="back/product_process.php" method="POST">
 						<input type="hidden" name="product" value="2001">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
+						<button class="btn btn-primary" id="pre1" style="margin-left:5%">Rs.200</button>
+						<button class="btn btn-primary" id="ltr1" style="margin-left:5%">1 Litre</button>
 					  </form>
 					</div>
 				  </div>
@@ -129,13 +134,15 @@
 				<div class="card" style="width:100%;">
 					<img src="./images/rice_img.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
-					  <h5 class="card-title">Coconut Oil</h5>
-					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made 
-						from all natural ingredients its easy to use, buy yours online today.</p>
+					  <h5 class="card-title">Rice Bran Oil</h5>
+					  <p class="card-text">  We hold expertise in offering an extensive range of
+                 Rice Bran Oil (Crude), which is extracted through refining the bran of the rice kernel.</p>
 					 
 					  <form action="back/product_process.php" method="POST">
 						<input type="hidden" name="product" value="3001">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
+						<button class="btn btn-primary" id="pre2" style="margin-left:5%">Rs.150</button>
+						<button class="btn btn-primary" id="ltr2" style="margin-left:5%">1 Litre</button>
 					  </form>
 					</div>
 				  </div>
@@ -145,53 +152,62 @@
 
 	<!-- ROW 2 PRODUCTS -->
 	<div class="row">
+		
 		<div class="col-md-4">
 			<div class="productbox">
-				
-				<div class="card" style="width:100% ;">
+				<div class="card" style="width:100%;">
 					<img src="./images/coco_img.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
 					  <h5 class="card-title">Coconut Oil</h5>
-					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made 
-						from all natural ingredients its easy to use, buy yours online today.</p>
-					 
+					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made from all natural 
+						ingredients its easy to use, buy yours online today.</p>
+					
 					  <form action="back/product_process.php" method="POST">
-						<input type="hidden" name="product" value="1002">
+						<input type="hidden" name="product" value="1001">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
+						<button class="btn btn-primary" id="pre" style="margin-left:5%">Rs.200</button>
+						<button class="btn btn-primary" id="ltr" style="margin-left:5%">2 Litre</button>
 					  </form>
+					  
 					</div>
-				</div>
+				  </div>
 			</div>
 		</div>
+		
 		<div class="col-md-4">
 			<div class="productbox">
-				<div class="card" style="width:100% ;">
+				<div class="card" style="width:100%;">
 					<img src="./images/neem_img.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
-					  <h5 class="card-title">Coconut Oil</h5>
-					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made 
-						from all natural ingredients its easy to use, buy yours online today.</p>
-					 
+					  <h5 class="card-title">Neem Oil</h5>
+					  <p class="card-text">Our range of Neem oil are 100% organic and versatile to use, made 
+								from all natural ingredients its easy to use, buy yours online today.</p>
+					
 					  <form action="back/product_process.php" method="POST">
-						<input type="hidden" name="product" value="2002">
+						<input type="hidden" name="product" value="2001">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
+						<button class="btn btn-primary" id="pre1" style="margin-left:5%">Rs.400</button>
+						<button class="btn btn-primary" id="ltr1" style="margin-left:5%">2 Litre</button>
 					  </form>
 					</div>
 				  </div>
 			</div>
 		</div>
+
 		<div class="col-md-4">
 			<div class="productbox">	
 				<div class="card" style="width:100%;">
 					<img src="./images/rice_img.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
-					  <h5 class="card-title">Coconut Oil</h5>
-					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made 
-						from all natural ingredients its easy to use, buy yours online today.</p>
-					  
+					  <h5 class="card-title">Rice Bran Oil</h5>
+					  <p class="card-text">  We hold expertise in offering an extensive range of
+                 Rice Bran Oil (Crude), which is extracted through refining the bran of the rice kernel.</p>
+					 
 					  <form action="back/product_process.php" method="POST">
-						<input type="hidden" name="product" value="3002">
+						<input type="hidden" name="product" value="3001">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
+						<button class="btn btn-primary" id="pre2" style="margin-left:5%">Rs.300</button>
+						<button class="btn btn-primary" id="ltr2" style="margin-left:5%">2 Litre</button>
 					  </form>
 					</div>
 				  </div>
@@ -200,62 +216,69 @@
 	</div>
 
 <!-- ROW 3 PRODUCTS -->
-	<div class="row">
+<div class="row">
+		
 		<div class="col-md-4">
-			<div class="productbox">				
-				<div class="card" style="width:100% ;">
+			<div class="productbox">
+				<div class="card" style="width:100%;">
 					<img src="./images/coco_img.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
 					  <h5 class="card-title">Coconut Oil</h5>
-					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made 
-						from all natural ingredients its easy to use, buy yours online today.</p>
-					  
+					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made from all natural 
+						ingredients its easy to use, buy yours online today.</p>
+					
 					  <form action="back/product_process.php" method="POST">
-						<input type="hidden" name="product" value="1003">
+						<input type="hidden" name="product" value="1001">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
+						<button class="btn btn-primary" id="preiii" style="margin-left:5%">Rs.500</button>
+						<button class="btn btn-primary" id="ltr" style="margin-left:5%">5 Litre</button>
 					  </form>
+					  
 					</div>
-				</div>
+				  </div>
 			</div>
 		</div>
 		
 		<div class="col-md-4">
 			<div class="productbox">
-				<div class="card" style="width:100% ;">
+				<div class="card" style="width:100%;">
 					<img src="./images/neem_img.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
-					  <h5 class="card-title">Coconut Oil</h5>
-					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made 
-						from all natural ingredients its easy to use, buy yours online today.</p>
-		
+					  <h5 class="card-title">Neem Oil</h5>
+					  <p class="card-text">Our range of Neem oil are 100% organic and versatile to use, made 
+								from all natural ingredients its easy to use, buy yours online today.</p>
+					
 					  <form action="back/product_process.php" method="POST">
-						<input type="hidden" name="product" value="2003">
+						<input type="hidden" name="product" value="2001">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
+						<button class="btn btn-primary" id="pre1" style="margin-left:5%">Rs.1000</button>
+						<button class="btn btn-primary" id="ltr1" style="margin-left:5%">5 Litre</button>
 					  </form>
 					</div>
-				</div>
-			</div>	
+				  </div>
+			</div>
 		</div>
 
 		<div class="col-md-4">
-			<div class="productbox">
-				<div class="card" style="width:100% ;">
+			<div class="productbox">	
+				<div class="card" style="width:100%;">
 					<img src="./images/rice_img.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
-					  <h5 class="card-title">Coconut Oil</h5>
-					  <p class="card-text">Our range of Coconut Oils are 100% organic and versatile to use, made 
-						from all natural ingredients its easy to use, buy yours online today.</p>
-					
+					  <h5 class="card-title">Rice Bran Oil</h5>
+					  <p class="card-text">  We hold expertise in offering an extensive range of
+                 Rice Bran Oil (Crude), which is extracted through refining the bran of the rice kernel.</p>
+					 
 					  <form action="back/product_process.php" method="POST">
-						<input type="hidden" name="product" value="3003">
+						<input type="hidden" name="product" value="3001">
 						<input type="submit" class="btn btn-primary" value="Add to cart">
+						<button class="btn btn-primary" id="pre2" style="margin-left:5%">Rs.750</button>
+						<button class="btn btn-primary" id="ltr2" style="margin-left:5%">5 Litre</button>
 					  </form>
 					</div>
-				</div>
+				  </div>
 			</div>
 		</div>
 	</div>
-</div>
 </section>
 
 <!-- CALL TO ACTION =============================-->
@@ -296,6 +319,69 @@
 <script src="js/jquery-.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/anim.js"></script>
+
+
+
+<script>
+document.getElementById("pre").addEventListener("click", function(event){
+  event.preventDefault()
+  
+
+});
+</script>
+
+<script>
+document.getElementById("pre1").addEventListener("click", function(event){
+  event.preventDefault()
+  
+  
+
+});
+
+
+
+</script>
+<script>
+document.getElementById("pre2").addEventListener("click", function(event){
+  event.preventDefault()
+  
+
+});
+
+
+
+</script>
+
+<script>
+document.getElementById("ltr").addEventListener("click", function(event){
+  event.preventDefault()
+  
+
+});
+
+
+
+</script>
+<script>
+document.getElementById("ltr1").addEventListener("click", function(event){
+  event.preventDefault()
+  
+
+});
+
+
+
+</script>
+<script>
+document.getElementById("ltr2").addEventListener("click", function(event){
+  event.preventDefault()
+  
+
+});
+
+
+
+</script>
 
 </body>
 </html>
