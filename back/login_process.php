@@ -22,14 +22,15 @@
             if($username=="abiabi"){
                 echo "<script> alert('Login Succesfull Admin'); document.location='../table.php' </script>";
             }else{
-                echo "<script> alert('Login Succesfull Admin'); document.location='../admin.php' </script>";
+                echo "<script> alert('Login Succesfull Manager'); document.location='../admin1.php' </script>";
             }    
         }
+       
         else{
             echo "<script> alert('Login Succesfull'); document.location='../public_home.php' </script>";
         }
     }
     else {
-        echo '<script type="text/javascript">sweetAlert("Failed!","Kindly try again","error")</script>';
+        echo '<script type="text/javascript">alert("Failed!","Kindly try again","error")</script>';
     }
 ?>
