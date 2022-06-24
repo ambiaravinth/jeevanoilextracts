@@ -42,6 +42,7 @@
 				<li class="propClone" ><a href="public_home.php" >Home</a></li>
 				<li class="propClone"><a href="product.php">Product</a></li>
 				<li class="propClone"><a href="cart.php" >My Cart</a></li>
+				<li class="propClone"><a href="order.php" >Orders</a></li>
 		
 
 

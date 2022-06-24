@@ -54,9 +54,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li class="propClone" ><a href="public_home.php" >Home</a></li>
 				<li class="propClone"><a href="product.php">Product</a></li>
-                
-				<li class="propClone"><a href="cart.php" >Cart</a></li> 
-                <li class="propClone"><a href="order.php" >Orders</a></li>
+				<li class="propClone"><a href="cart.php" >Cart</a></li>
 				<li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 						<?php echo $_SESSION["current_username"]; ?> 
@@ -77,7 +75,7 @@
 			<div class="col-md-12 text-center">
 				<div class="text-pageheader">
 					<div class="subtext-image" data-scrollreveal="enter bottom over 1.7s after 0.0s">
-						 My Cart 
+						 My Orders
 					</div>
 				</div>
 			</div>
@@ -91,7 +89,7 @@
 <div class="container toparea">
 	<div class="underlined-title">
 		<div class="editContent">
-			<h1 class="text-center latestitems">Cart</h1>
+			<h1 class="text-center latestitems">Orders</h1>
 		</div>
 		<div class="wow-hr type_short">
 			<span class="wow-hr-h">
@@ -133,10 +131,10 @@
                                                         
                                                         <form method=\"post\">
                                                             <input type=\"hidden\" name=\"product_id\" value=\"".$data['p_id']."\">
-                                                            <input type=\"submit\" name=\"button1\" value=\"-\" />
+                                                            <input type=\"submit\"  value=\"-\" />
                                                             <p1 class=\"well well-sm\">".$data['nos']."</p1>  
                                                            
-                                                            <input type=\"submit\" name=\"button2\" value=\"+\" />
+                                                            <input type=\"submit\"  value=\"+\" />
                                                         </form>
 
                                                 </div>
@@ -145,7 +143,7 @@
                                                     <p1>".$data['p_price']."</p1>₹<br><br>
                                                     <form method=\"post\">
                                                         <input type=\"hidden\" name=\"product_id\" value=\"".$data['p_id']."\">
-                                                        <input  class=\"btn btn-danger\" type=\"submit\" name=\"button3\" value=\"Remove\"/>
+                                                        <input  class=\"btn btn-danger\" type=\"submit\" value=\"Ordered\"/>
                                                     </form>
                                                 </div>
                                             </div>
@@ -180,7 +178,7 @@
                         }
                     }
                     mysqli_query($conn,$sql);
-                    echo "<script>document.location='cart.php' </script>";
+                    echo "<script>document.location='order.php' </script>";
                 }
                 
                 if(isset($_POST['button2'])){
@@ -198,38 +196,17 @@
                         $sql = "UPDATE cart SET nos='$nos', p_price='$price' where p_id='$p_id' and username='$name'";
                     }
                     mysqli_query($conn,$sql);
-                    echo "<script>document.location='cart.php' </script>"; 
+                    echo "<script>document.location='order.php' </script>"; 
                 }
                 
                 if(isset($_POST['button3'])){
                     $p_id = $_POST['product_id'];
                     $sql = "DELETE FROM cart where p_id='$p_id' and username='$name'"; 
                     mysqli_query($conn,$sql);
-                    echo "<script>document.location='cart.php' </script>";
+                    echo "<script>document.location='order.php' </script>";
                 }
             ?>
 
-			<div class="col-md-12 col-lg-4">
-                <div class="summary">
-                    <h3 style="text-align: center;">Summary</h3>
-                    <div class="summary-item">
-						<p1 style="padding-left: 20%;">Subtotal</p1>
-						<p1 style="padding-left: 33%;"><?php echo "Rs.". $sub_price; ?></p1>
-					</div>
-                    <div class="summary-item">
-						<p1 style="padding-left: 20%;">Discount</p1>
-						<p1 style="padding-left: 32%;"><?php echo $discount." %"; ?></p1>
-					</div>
-					<hr>
-                    <div class="summary-item">
-						<p1 style="padding-left: 20%;"><b>Total</b></p1>
-						<p1 style="padding-left: 40%;"><?php echo "Rs.". $total; ?></p1>
-                    </div>
-					<hr>
-                    <?php echo '<a href="https://pages.razorpay.com/pl_JlEnNJUrNStdEF/view?amount='.$total.'&email='.$email.'&name='.$name.'&address='.$address.'&phone='.$number.'"><button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button></a> ';?>
-                    
-                </div>
-            </div>
         </div>
     </div>
 </div>
