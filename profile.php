@@ -1,5 +1,6 @@
 <?php
 	require_once 'back/session.php';
+  require_once 'back/profile_process.php';
 ?>
 
 <!DOCTYPE html>
@@ -99,106 +100,58 @@
 <div class="row" style="margin-left:20%;">
       <div class="col-6 offset-3">
         <div class="container mt-5 card bg-white p-3">
-          <form class="signup-form"  method="post">
+          
+        <form class="signup-form"  method="post">
    
             <div class="row">
             <div class="col-md-4">
               <label for="fname" class="form-label">Username :</label>
-              <input type="text" class="form-control" id="name" name="user_name"  readonly/>
+              <input type="text" class="form-control" name="ip_username" value="<?php $data_username ?>"  readonly/>
             </div>
             <div class="col-md-4">
               <label for="name" class="form-label">Password :</label>
-              <input
-                type="text"
-                class="form-control"
-                id="pass"
-                name="password"
-                readonly />
+              <input type="text" class="form-control" name="ip_password" value="<?php $data_password ?>" readonly />
             </div>
-        </div>
-
-        
-
-
-
-
-		<div class="row" style="margin-top:2%;" >
+            </div>
+		        <div class="row" style="margin-top:2%;" >
             <div class="col-md-4">
               <label for="names" class="form-label">Name:</label>
-              <input type="text" class="form-control" id="names" name="name1" readonly/>
+              <input type="text" class="form-control" name="ip_name" value="<?php $data_name ?>" readonly/>
             </div>
             <div class="col-md-4">
               <label for="pan" class="form-label">PAN NO :</label>
-              <input
-                type="text"
-                class="form-control"
-                id="pan_no"
-                name="pan"
-                readonly/>
+              <input type="text" class="form-control" name="ip_pan" value="<?php $data_pan_no ?>" readonly/>
             </div>
         </div>
-
 
 		<div class="row" style="margin-top:2%;">
             <div class="col-md-4">
               <label for="email" class="form-label">Email :</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="abc@gmail.com"
-                name="Email_ID"
-                readonly/>
+              <input type="email" class="form-control" name="ip_email" value="<?php $data_email ?>" readonly/>
             </div>
-
-
 			<div class="col-md-4">
               <label for="name" class="form-label">GST NO:</label>
-              <input
-                type="text"
-                class="form-control"
-                id="gst"
-                name="gstno"
-                readonly/>
+              <input type="text" class="form-control" name="ip_gst" value="<?php $data_gst_no ?>" readonly/>
             </div>
             </div>
    
             <div class="row" style="margin-top:2%;">
-            
-       
+                   
             <div class="col-md-4">
               <label for="mobile" class="form-label">Mobile number :</label>
-              <input
-                type="text"
-                class="form-control"
-                id="mobile"
-                name="Mobile_No"
-                readonly/>
+              <input type="text" class="form-control" name="ip_mobile" value="<?php $data_mobile_no ?>" readonly/>
             </div>
-
 
 			<div class="col-md-4">
               <label for="address" class="form-label">Address :</label>
-              <textarea
-                type="textarea"
-                class="form-control"
-                id="address"
-                name="adrs"
-                readonly
-              ></textarea>
+              <input type="textarea" class="form-control" name="ip_address" value="<?php $data_address ?>" readonly/>
             </div>
-
-
-
         </div>
            
-         
-            
-
             <div class="col-12" style="margin-top:2%; margin-left:15% ">
                 <br>
               <button  id="qwe" class="btn btn-primary">Edit</button>
-			  <button onclick="myfun()" class="btn btn-primary" style="margin-left:25%;">save</button>
+			        <button onclick="myfun()" class="btn btn-primary" style="margin-left:25%;">save</button>
             </div>
           </form>
         </div>
