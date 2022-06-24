@@ -133,10 +133,7 @@ require('PHPMailer/Exception.php');
 
 if(isset($_POST['submit']))
 {
-  
-  $email=$_POST['email'];
-  
-  
+    $email=$_POST['email'];
   $mail = new PHPMailer(true);
 
   try {

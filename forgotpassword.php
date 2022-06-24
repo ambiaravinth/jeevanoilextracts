@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -106,7 +107,7 @@ echo '<script>sweetAlert("Verification Success!","Keep safe of your password","s
 			
 			<form method="post" name="myForm"  onsubmit="return validateForm()"action="back/login_process.php" id="contactform">
 				<div class="form" style="margin-left: 20%;margin-right: 20%;">
-					<input type="email" name="ip_username" >
+					<input type="email" name="ip_username" value="maheshapj2002@gmail.com"readonly >
 					<input type="password" name="newpassword" placeholder="Enter your New Password" required>
 					<input type="text" name="confirmpassword" placeholder="Re-enter your Password" required>
                     </br><input type="submit" class="clearfix btn" value="Next">
