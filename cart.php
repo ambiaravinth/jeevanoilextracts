@@ -2,6 +2,16 @@
     include_once 'back/db.php';
 	require_once 'back/session.php';
     require_once 'back/cart_process.php';
+    $delivery=$_SESSION["current_username"];
+    $sql = "SELECT * FROM users where username='$delivery'"; 
+    $query = mysqli_query($conn,$sql);
+    
+    $data  = mysqli_fetch_array($query);
+    $email = $data['email'];
+    $number = $data['mobile_no'];
+    $name = $data['name'];
+    $address = $data['address'];
+    
 ?>
 
 <!DOCTYPE html>
@@ -101,7 +111,7 @@
                 <?php
                     while($data = mysqli_fetch_array($user_products))
                     {
-                    
+                      
                         echo "<div class=\"product\">
                                 <div class=\"row\">
                                     <div class=\"col-md-3\">
@@ -113,7 +123,8 @@
                                                 <div class=\"col-md-5 product-name\">
                                                     <div class=\"product-name\">
                                                         <a href=\"#\">".$data['p_name']."</a>
-                                                    </div>
+                                                       
+                                                    </div>  
                                                 </div>
                                                 <div class=\"col-md-4 quantity\">
                                                     <label for=\"quantity\">Quantity:</label><br>
@@ -122,6 +133,7 @@
                                                             <input type=\"hidden\" name=\"product_id\" value=\"".$data['p_id']."\">
                                                             <input type=\"submit\" name=\"button1\" value=\"-\" />
                                                             <p1 class=\"well well-sm\">".$data['nos']."</p1>  
+                                                           
                                                             <input type=\"submit\" name=\"button2\" value=\"+\" />
                                                         </form>
 
@@ -200,19 +212,20 @@
                     <h3 style="text-align: center;">Summary</h3>
                     <div class="summary-item">
 						<p1 style="padding-left: 20%;">Subtotal</p1>
-						<p1 style="padding-left: 33%;"><?php echo $sub_price; ?></p1>
+						<p1 style="padding-left: 33%;"><?php echo "Rs.". $sub_price; ?></p1>
 					</div>
                     <div class="summary-item">
 						<p1 style="padding-left: 20%;">Discount</p1>
-						<p1 style="padding-left: 32%;"><?php echo $discount; ?></p1>
+						<p1 style="padding-left: 32%;"><?php echo $discount." %"; ?></p1>
 					</div>
 					<hr>
                     <div class="summary-item">
 						<p1 style="padding-left: 20%;"><b>Total</b></p1>
-						<p1 style="padding-left: 40%;"><?php echo $total; ?></p1>
+						<p1 style="padding-left: 40%;"><?php echo "Rs.". $total; ?></p1>
                     </div>
 					<hr>
-                    <?php echo '<a href="https://pages.razorpay.com/pl_JcdokhFWmldgcu/view?amount='.$total.'"><button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button></a> ';?>
+                    <?php echo '<a href="https://pages.razorpay.com/pl_JlEnNJUrNStdEF/view?amount='.$total.'&email='.$email.'&name='.$name.'&address='.$address.'&phone='.$number.'"><button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button></a> ';?>
+                    
                 </div>
             </div>
         </div>

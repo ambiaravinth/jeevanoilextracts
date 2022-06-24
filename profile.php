@@ -1,5 +1,20 @@
 <?php
-	require_once 'back/session.php';
+	 include_once 'back/db.php';
+   require_once 'back/session.php';
+     require_once 'back/cart_process.php';
+     $delivery=$_SESSION["current_username"];
+     $sql = "SELECT * FROM users where username='$delivery'"; 
+     $query = mysqli_query($conn,$sql);
+     
+     $data  = mysqli_fetch_array($query);
+     $email = $data['email'];
+     $number = $data['mobile_no'];
+     $name = $data['name'];
+     $address_no = $data['address'];
+     $username = $data['username'];
+     $password = $data['password'];
+     $pan = $data['pan_no'];
+     $gst = $data['gst_no'];
 ?>
 
 <!DOCTYPE html>
@@ -104,7 +119,7 @@
             <div class="row">
             <div class="col-md-4">
               <label for="fname" class="form-label">Username :</label>
-              <input type="text" class="form-control" id="name" name="user_name"  readonly/>
+              <input type="text" class="form-control" id="name" name="user_name" value="<?php echo "$username" ?>" readonly/>
             </div>
             <div class="col-md-4">
               <label for="name" class="form-label">Password :</label>
@@ -113,6 +128,7 @@
                 class="form-control"
                 id="pass"
                 name="password"
+                value="<?php echo "$password" ?>"
                 readonly />
             </div>
         </div>
@@ -125,7 +141,7 @@
 		<div class="row" style="margin-top:2%;" >
             <div class="col-md-4">
               <label for="names" class="form-label">Name:</label>
-              <input type="text" class="form-control" id="names" name="name1" readonly/>
+              <input type="text" class="form-control" id="names" name="name1" value="<?php echo "$name" ?>" readonly/>
             </div>
             <div class="col-md-4">
               <label for="pan" class="form-label">PAN NO :</label>
@@ -134,6 +150,7 @@
                 class="form-control"
                 id="pan_no"
                 name="pan"
+                value="<?php echo "$name" ?>"
                 readonly/>
             </div>
         </div>
@@ -146,6 +163,7 @@
                 type="email"
                 class="form-control"
                 id="email"
+                value="<?php echo "$email" ?>"
                 placeholder="abc@gmail.com"
                 name="Email_ID"
                 readonly/>
@@ -158,6 +176,7 @@
                 type="text"
                 class="form-control"
                 id="gst"
+                value="<?php echo "$gst" ?>"
                 name="gstno"
                 readonly/>
             </div>
@@ -172,6 +191,7 @@
                 type="text"
                 class="form-control"
                 id="mobile"
+                value="<?php echo "$number" ?>"
                 name="Mobile_No"
                 readonly/>
             </div>
@@ -179,13 +199,14 @@
 
 			<div class="col-md-4">
               <label for="address" class="form-label">Address :</label>
-              <textarea
+              <input
                 type="textarea"
                 class="form-control"
                 id="address"
+                value="<?php echo "$address_no" ?>"
                 name="adrs"
                 readonly
-              ></textarea>
+              />
             </div>
 
 
