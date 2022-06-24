@@ -41,17 +41,7 @@
 				<!--  <li class="propClone"><a href="###">Product</a></li>
 				<li class="propClone"><a href="###" >Checkout</a></li> -->
                 <li class="propClone"><a href="users.html" >View Users</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                   PRODUCTS
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li style="margin-top:4%;"><a class="dropdown-item" href="product_list.html"> <span style="margin-left:10%;">View Products</span></a></li>
-                     
-                      <li><hr class="dropdown-divider"></li>
-                      <li style="margin-top:-4%;"><a class="dropdown-item" href="admin_product.html">    <span style="margin-left:10%;">Manage Products</span> </a></li>
-                    </ul>
-                  </li>
+                <li class="propClone"><a href="product_list.html" >Manage Products</a></li>
 
 
                 <li class="nav-item dropdown">
@@ -106,6 +96,45 @@
 
 <!-- USERS TABLE -->
 
+<div class="row" style="margin-left:15%;">
+    <div class="col-md-10">
+
+        <table class="table table-hover">
+            <thead>
+              <tr  class="bg-primary">
+                <th scope="col">#</th>
+                <th scope="col">UserID</th>
+                <th scope="col">Username</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>it45</td>
+                <td>mahesh</td>
+                <td><button class="btn btn-warning"><i class="fa fa-trash"></i><span style="margin-left:15% ;">Remove</span></button></td>
+              
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>it54</td>
+                <td>Niresh</td>
+                <td><button class="btn btn-warning"><i class="fa fa-trash"></i><span style="margin-left:15% ;">Remove</span></button></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>it109</td>
+                <td>aravinth</td>
+                <td><button class="btn btn-warning"><i class="fa fa-trash"></i><span style="margin-left:15% ;">Remove</span></button></td>
+              </tr>
+            </tbody>
+          </table>
+        
+        
+
+    </div>
+</div>
 
 
 

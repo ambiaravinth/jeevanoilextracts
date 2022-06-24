@@ -41,17 +41,7 @@
 				<!--  <li class="propClone"><a href="###">Product</a></li>
 				<li class="propClone"><a href="###" >Checkout</a></li> -->
                 <li class="propClone"><a href="users.html" >View Users</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                   PRODUCTS
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li style="margin-top:4%;"><a class="dropdown-item" href="product_list.html"> <span style="margin-left:10%;">View Products</span></a></li>
-                     
-                      <li><hr class="dropdown-divider"></li>
-                      <li style="margin-top:-4%;"><a class="dropdown-item" href="admin_product.html">    <span style="margin-left:10%;">Manage Products</span> </a></li>
-                    </ul>
-                  </li>
+                <li class="propClone"><a href="product_list.html" >Manage Products</a></li>
 
 
                 <li class="nav-item dropdown">
@@ -75,7 +65,7 @@
 			<div class="col-md-12 text-center">
 				<div class="text-pageheader">
 					<div class="subtext-image" data-scrollreveal="enter bottom over 1.7s after 0.0s">
-						Users List 
+						Products List 
 					</div>
 				</div>
 			</div>
@@ -104,9 +94,117 @@
 
 
 
-<!-- USERS TABLE -->
+<!-- PRODUCTS TABLE -->
 
 
+
+
+
+<div class="row" style="margin-left:15%;">
+    <div class="col-md-10">
+
+        <table class="table table-hover" >
+            <thead>
+              <tr  class="bg-primary"  >
+                <th scope="col">#</th>
+                <th scope="col">ProductID</th>
+                <th scope="col">Productname</th>
+                <th scope="col">Price</th>
+                <th scope="col" >Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>pq12</td>
+                <td>Rice Bran oil</td>
+                <td>150</td>
+                <td><button class="btn btn-warning"><i class="fa fa-trash"></i><span style="margin-left:15% ;">Remove</span></button></td>
+              
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>hg45</td>
+                <td>coconut oil</td>
+                <td>100</td>
+                <td><button class="btn btn-warning"><i class="fa fa-trash"></i><span style="margin-left:15% ;">Remove</span></button></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>we23</td>
+                <td>Neem Oil</td>
+                <td>250</td>
+                <td><button class="btn btn-warning"><i class="fa fa-trash"></i><span style="margin-left:15% ;">Remove</span></button></td>
+              </tr>
+            </tbody>
+          </table>
+      
+
+        <button id="btn" class="btn btn-primary" style="margin-left:40%;">Add New Product</button> 
+        <!-- <form id="form">
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+          </form> -->
+
+
+        <form class="signup-form"  method="post" id="form" style="margin-left:20%;display: none;">
+   
+            <div class="row">
+            <div class="col-md-4">
+              <label for="pid" class="form-label">ProductID:</label>
+              <input type="text" class="form-control" id="name" name="pid"  />
+            </div>
+            <div class="col-md-4">
+              <label for="name" class="form-label">Product Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="pname"
+                name="pname"
+                 />
+            </div>
+        </div>
+
+        
+
+
+
+
+		<div class="row" style="margin-top:2%;" >
+            <div class="col-md-4">
+              <label for="price" class="form-label">Price:</label>
+              <input type="text" class="form-control" id="price" name="cost" />
+            </div>
+            <div class="col-md-4">
+              <label for="pan" class="form-label">Product Image URL:</label>
+              <input
+                type="url"
+                class="form-control"
+                id="img"
+                name="image"
+                />
+            </div>
+        </div>
+
+
+	
+   
+          
+           
+         
+            
+
+            <div class="col-12" style="margin-top:2%; margin-left:45% ">
+                <br>
+              
+			  <button type="submit" onclick="myfun()" class="btn btn-primary" style="margin-left:25%;">save</button>
+            </div>
+          </form>
+        
+
+    </div>
+</div>
 
 
 
@@ -158,6 +256,22 @@
 <script src="js/jquery-.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/anim.js"></script>
+<script>
+ const btn = document.getElementById('btn');
 
+btn.addEventListener('click', () => {
+  const form = document.getElementById('form');
+
+  if (form.style.display === 'none') {
+
+    form.style.display = 'block';
+  } else {
+
+    form.style.display = 'none';
+  }
+});
+
+
+</script>
 </body>
 </html>
