@@ -1,5 +1,6 @@
 <?php
 	require_once 'back/session.php';
+	require_once 'back/admin_user_process.php';
 ?>
 
 <!DOCTYPE html>
@@ -110,34 +111,40 @@
         <table class="table table-hover">
             <thead>
               <tr>
-                <th scope="col">#</th>
+                <th scope="col">S.No</th>
                 <th scope="col">Users</th>
                 <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>mahesh</td>
-                <td><button class="btn btn-warning"><i class="fa fa-trash"></i><span style="margin-left:15% ;">Remove</span></button></td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Niresh</td>
-                <td><button class="btn btn-warning"><i class="fa fa-trash"></i><span style="margin-left:15% ;">Remove</span></button></td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>aravinth</td>
-                <td><button class="btn btn-warning"><i class="fa fa-trash"></i><span style="margin-left:15% ;">Remove</span></button></td>
-              </tr>
+			<?php
+				$count = 1;
+				while($data = mysqli_fetch_array($data_users))
+				{ echo "
+					<tr>
+						<th scope=\"row\">$count</th>
+						<td>".$data['username']."</td>
+						<form method=\"post\">
+                            <input type=\"hidden\" name=\"username\" value=\"".$data['username']."\">
+							<td><button class=\"btn btn-warning\" type=\"submit\" name=\"button\"><i class=\"fa fa-trash\"></i><span style=\"margin-left:15% ;\">Remove</span></button></td>
+                        </form>
+					</tr>";
+					$count = $count+1;
+				}
+			?>
             </tbody>
           </table>
     </div>
 </div>
 
-
-
+<?php
+	if(isset($_POST['button'])){
+		$ip_username = $_POST['username'];
+		$sql = "DELETE FROM users where username='$ip_username'"; 
+		mysqli_query($conn,$sql);
+		echo "<script>document.location='admin_users.php' </script>";
+	}
+?>
 
 
 
