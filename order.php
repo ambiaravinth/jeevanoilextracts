@@ -102,7 +102,7 @@
 </div>
 </section>
 
-<div style="padding-left: 15%; padding-right: 15%;">
+<div style="padding-left: 30%; padding-right: 15%;">
 <div class="content">
         <div class="row">
             <div class="col-md-12 col-lg-8">
@@ -131,10 +131,10 @@
                                                         
                                                         <form method=\"post\">
                                                             <input type=\"hidden\" name=\"product_id\" value=\"".$data['p_id']."\">
-                                                            <input type=\"submit\"  value=\"-\" />
+                                                            
                                                             <p1 class=\"well well-sm\">".$data['nos']."</p1>  
                                                            
-                                                            <input type=\"submit\"  value=\"+\" />
+                                                            
                                                         </form>
 
                                                 </div>
