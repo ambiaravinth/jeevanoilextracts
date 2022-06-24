@@ -1,5 +1,4 @@
 <?php
-
 	 include_once 'back/db.php';
    require_once 'back/session.php';
      require_once 'back/cart_process.php';
@@ -16,9 +15,6 @@
      $password = $data['password'];
      $pan = $data['pan_no'];
      $gst = $data['gst_no'];
-	require_once 'back/session.php';
-  // require_once 'back/profile_process.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -123,7 +119,6 @@
             <div class="row">
             <div class="col-md-4">
               <label for="fname" class="form-label">Username :</label>
-<<<<<<< HEAD
               <input type="text" class="form-control" id="name" name="user_name" value="<?php echo "$username" ?>" readonly/>
             </div>
             <div class="col-md-4">
@@ -135,13 +130,6 @@
                 name="password"
                 value="<?php echo "$password" ?>"
                 readonly />
-=======
-              <input type="text" class="form-control" id="name" name="ip_username" value="<?php $data_username ?>"  readonly/>
-            </div>
-            <div class="col-md-4">
-              <label for="name" class="form-label">Password :</label>
-              <input type="text" class="form-control" id="pass" name="ip_password" value="<?php $data_password ?>" readonly />
->>>>>>> 6016e8ef62f5bf1f6922444b8a7735019bb6033d
             </div>
         </div>
 
@@ -153,7 +141,6 @@
 		<div class="row" style="margin-top:2%;" >
             <div class="col-md-4">
               <label for="names" class="form-label">Name:</label>
-<<<<<<< HEAD
               <input type="text" class="form-control" id="names" name="name1" value="<?php echo "$name" ?>" readonly/>
             </div>
             <div class="col-md-4">
@@ -165,13 +152,6 @@
                 name="pan"
                 value="<?php echo "$name" ?>"
                 readonly/>
-=======
-              <input type="text" class="form-control" id="names" name="ip_name" value="<?php $data_name ?>" readonly/>
-            </div>
-            <div class="col-md-4">
-              <label for="pan" class="form-label">PAN NO :</label>
-              <input type="text" class="form-control" id="pan_no" name="ip_pan" value="<?php $data_pan_no ?>" readonly/>
->>>>>>> 6016e8ef62f5bf1f6922444b8a7735019bb6033d
             </div>
         </div>
 
@@ -179,7 +159,6 @@
 		<div class="row" style="margin-top:2%;">
             <div class="col-md-4">
               <label for="email" class="form-label">Email :</label>
-<<<<<<< HEAD
               <input
                 type="email"
                 class="form-control"
@@ -188,15 +167,11 @@
                 placeholder="abc@gmail.com"
                 name="Email_ID"
                 readonly/>
-=======
-              <input type="email" class="form-control" id="email" name="ip_email" value="<?php $data_email ?>" readonly/>
->>>>>>> 6016e8ef62f5bf1f6922444b8a7735019bb6033d
             </div>
 
 
 			<div class="col-md-4">
               <label for="name" class="form-label">GST NO:</label>
-<<<<<<< HEAD
               <input
                 type="text"
                 class="form-control"
@@ -204,9 +179,6 @@
                 value="<?php echo "$gst" ?>"
                 name="gstno"
                 readonly/>
-=======
-              <input type="text" class="form-control" id="gst" name="ip_gst" value="<?php $data_gst_no ?>" readonly/>
->>>>>>> 6016e8ef62f5bf1f6922444b8a7735019bb6033d
             </div>
             </div>
    
@@ -215,7 +187,6 @@
        
             <div class="col-md-4">
               <label for="mobile" class="form-label">Mobile number :</label>
-<<<<<<< HEAD
               <input
                 type="text"
                 class="form-control"
@@ -223,15 +194,11 @@
                 value="<?php echo "$number" ?>"
                 name="Mobile_No"
                 readonly/>
-=======
-              <input type="text" class="form-control" id="mobile" name="ip_mobile" value="<?php $data_mobile_no ?>" readonly/>
->>>>>>> 6016e8ef62f5bf1f6922444b8a7735019bb6033d
             </div>
 
 
 			<div class="col-md-4">
               <label for="address" class="form-label">Address :</label>
-<<<<<<< HEAD
               <input
                 type="textarea"
                 class="form-control"
@@ -240,9 +207,6 @@
                 name="adrs"
                 readonly
               />
-=======
-              <input type="textarea" class="form-control" id="address" name="ip_address" value="<?php $data_address ?>" readonly/>
->>>>>>> 6016e8ef62f5bf1f6922444b8a7735019bb6033d
             </div>
 
 
