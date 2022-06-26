@@ -1,81 +1,23 @@
 <?php
 
-/**
- * PHPMailer RFC821 SMTP email transport class.
- * PHP Version 5.5.
- *
- * @see       https://github.com/PHPMailer/PHPMailer/ The PHPMailer GitHub project
- *
- * @author    Marcus Bointon (Synchro/coolbru) <phpmailer@synchromedia.co.uk>
- * @author    Jim Jagielski (jimjag) <jimjag@gmail.com>
- * @author    Andy Prevost (codeworxtech) <codeworxtech@users.sourceforge.net>
- * @author    Brent R. Matzelle (original founder)
- * @copyright 2012 - 2020 Marcus Bointon
- * @copyright 2010 - 2012 Jim Jagielski
- * @copyright 2004 - 2009 Andy Prevost
- * @license   http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
- * @note      This program is distributed in the hope that it will be useful - WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
- * FITNESS FOR A PARTICULAR PURPOSE.
- */
-
 namespace PHPMailer\PHPMailer;
 
-/**
- * PHPMailer RFC821 SMTP email transport class.
- * Implements RFC 821 SMTP commands and provides some utility methods for sending mail to an SMTP server.
- *
- * @author Chris Ryan
- * @author Marcus Bointon <phpmailer@synchromedia.co.uk>
- */
 class SMTP
 {
-    /**
-     * The PHPMailer SMTP version number.
-     *
-     * @var string
-     */
+    //   The PHPMailer SMTP version number.
     const VERSION = '6.6.0';
-
-    /**
-     * SMTP line break constant.
-     *
-     * @var string
-     */
+    //   SMTP line break constant.
     const LE = "\r\n";
-
-    /**
-     * The SMTP port to use if one is not specified.
-     *
-     * @var int
-     */
+    //  The SMTP port to use if one is not specified.
     const DEFAULT_PORT = 25;
-
-    /**
-     * The maximum line length allowed by RFC 5321 section 4.5.3.1.6,
-     * *excluding* a trailing CRLF break.
-     *
-     * @see https://tools.ietf.org/html/rfc5321#section-4.5.3.1.6
-     *
-     * @var int
-     */
+    //  The maximum line length allowed by RFC 5321 section 4.5.3.1.6,excluding* a trailing CRLF break.
     const MAX_LINE_LENGTH = 998;
 
-    /**
-     * The maximum line length allowed for replies in RFC 5321 section 4.5.3.1.5,
-     * *including* a trailing CRLF line break.
-     *
-     * @see https://tools.ietf.org/html/rfc5321#section-4.5.3.1.5
-     *
-     * @var int
-     */
+    //  The maximum line length allowed for replies in RFC 5321 section 4.5.3.1.5, *including* a trailing CRLF line break.
     const MAX_REPLY_LENGTH = 512;
 
-    /**
-     * Debug level for no output.
-     *
-     * @var int
-     */
+    
+    //  * Debug level for no output.
     const DEBUG_OFF = 0;
 
     /**
@@ -289,7 +231,7 @@ class SMTP
                 $str = preg_replace('/\r\n|\r/m', "\n", $str);
                 echo gmdate('Y-m-d H:i:s'),
                 "\t",
-                    //Trim trailing space
+                //Trim trailing space
                 trim(
                     //Indent for readability, except for trailing break
                     str_replace(
@@ -298,7 +240,7 @@ class SMTP
                         trim($str)
                     )
                 ),
-                "\n";
+                    "\n";
         }
     }
 
@@ -345,7 +287,7 @@ class SMTP
         //Get any announcement
         $this->last_reply = $this->get_lines();
         $this->edebug('SERVER -> CLIENT: ' . $this->last_reply, self::DEBUG_SERVER);
-        $responseCode = (int)substr($this->last_reply, 0, 3);
+        $responseCode = (int) substr($this->last_reply, 0, 3);
         if ($responseCode === 220) {
             return true;
         }
@@ -430,7 +372,7 @@ class SMTP
         //SMTP server can take longer to respond, give longer timeout for first read
         //Windows does not have support for this timeout function
         if (strpos(PHP_OS, 'WIN') !== 0) {
-            $max = (int)ini_get('max_execution_time');
+            $max = (int) ini_get('max_execution_time');
             //Don't bother if unlimited, or if set_time_limit is disabled
             if (0 !== $max && $timeout > $max && strpos(ini_get('disable_functions'), 'set_time_limit') === false) {
                 @set_time_limit($timeout);
